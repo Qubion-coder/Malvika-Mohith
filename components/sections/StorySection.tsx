@@ -13,9 +13,9 @@ const storyItems = [
     subtitle: "2012",
     content: "We met in 2012, 14 years ago. What began as friendship slowly grew into deep love, trust, and a lifelong bond.",
     icon: Stars,
-    color: "#ff4d6d",
-    gradient: "from-[#ff4d6d]/10 to-[#ffb3c1]/20",
-    accentBg: "bg-[#ff4d6d]",
+    color: "#ffbec6",
+    gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
+    accentBg: "bg-[#ffbec6]",
     tag: "2012",
   },
   {
@@ -25,9 +25,9 @@ const storyItems = [
     subtitle: "14 Years of Love",
     content: "Over the years, we supported each other through every season of life. Today, with grateful hearts, we are ready to begin our forever as husband and wife.",
     icon: BookHeart,
-    color: "#c084fc",
-    gradient: "from-[#c084fc]/10 to-[#e9d5ff]/20",
-    accentBg: "bg-[#c084fc]",
+    color: "#b5c57a",
+    gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
+    accentBg: "bg-[#b5c57a]",
     tag: "Journey",
   },
   {
@@ -37,9 +37,9 @@ const storyItems = [
     subtitle: "A Sacred Yes",
     content: "With prayer and joy, we said yes to this new chapter. Your love and blessings make this day even more meaningful.",
     icon: Camera,
-    color: "#f59e42",
-    gradient: "from-[#f59e42]/10 to-[#fde68a]/20",
-    accentBg: "bg-[#f59e42]",
+    color: "#ffbec6",
+    gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
+    accentBg: "bg-[#ffbec6]",
     tag: "Promise",
   },
   {
@@ -49,9 +49,9 @@ const storyItems = [
     subtitle: "Our Wedding Day",
     content: "Now we celebrate our wedding day with the people we love. Thank you for being part of our story.",
     icon: PartyPopper,
-    color: "#10b981",
-    gradient: "from-[#10b981]/10 to-[#a7f3d0]/20",
-    accentBg: "bg-[#10b981]",
+    color: "#b5c57a",
+    gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
+    accentBg: "bg-[#b5c57a]",
     tag: "Forever",
   },
 ];
@@ -81,18 +81,18 @@ export default function StorySection() {
   return (
     <section
       ref={ref}
-      className="relative px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden bg-[#faf7f2]"
+      className="relative px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden bg-white"
       style={{ minHeight: 'auto' }}
     >
       {/* ── Subtle background texture ── */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 opacity-10 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #ff8fa3 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, var(--primary) 1px, transparent 1px)`,
           backgroundSize: '36px 36px',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#faf7f2] via-transparent to-[#faf7f2] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white pointer-events-none" />
 
       {/* Decorative watermark shape */}
       <div className="absolute bottom-0 right-0 h-48 w-48 select-none rounded-full bg-[radial-gradient(circle,rgba(255,143,163,0.22),transparent_72%)] opacity-40 blur-sm md:h-72 md:w-72 pointer-events-none" />
@@ -111,12 +111,12 @@ export default function StorySection() {
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#ff8fa3]">Our Love Story</span>
             <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#4a3b3c] leading-tight">
-            Written in the{' '}
-            <span className="italic text-[#ff4d6d] relative inline-block">
-              Stars
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+            Our Love{' '}
+            <span className="italic text-primary relative inline-block">
+              Story
               <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
-                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#ff8fa3" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="var(--primary)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h2>

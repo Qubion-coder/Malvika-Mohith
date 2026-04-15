@@ -3,8 +3,7 @@ export type GoogleSheetFormType = 'rsvp' | 'wish';
 interface SubmitPayload {
   formType: GoogleSheetFormType;
   name: string;
-  guests?: string;
-  dietary?: string;
+  attending?: string;
   message?: string;
 }
 

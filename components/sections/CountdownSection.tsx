@@ -18,7 +18,7 @@ export default function CountdownSection() {
     triggerOnce: true,
   });
 
-  const targetDate = useMemo(() => new Date('2026-05-30T10:30:00').getTime(), []);
+  const targetDate = useMemo(() => new Date('2027-01-30T15:00:00').getTime(), []);
 
   const getTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();
@@ -65,14 +65,14 @@ export default function CountdownSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff8ee_0%,#fff2df_45%,#fbe8d4_100%)] px-4 py-24 sm:px-6 lg:px-8 md:py-32"
+      className="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8 md:py-32"
     >
       {/* Premium Atmosphere */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ x: [0, 60, 0], y: [0, 30, 0], scale: [1, 1.12, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -left-[12%] top-[-8%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-br from-[#f9c9d2] to-[#ffe9c7] opacity-70 blur-[110px]"
+          className="absolute -left-[12%] top-[-8%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-br from-primary/20 to-secondary/15 opacity-70 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, -45, 0], y: [0, -45, 0], scale: [1, 1.18, 1] }}
@@ -130,17 +130,17 @@ export default function CountdownSection() {
         >
           <motion.div
             whileHover={{ scale: 1.04 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#dca86f]/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(214,153,107,0.18)] backdrop-blur-md"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-secondary/25 bg-white/70 px-5 py-2.5 shadow-sm backdrop-blur-md"
           >
-            <Sparkles className="h-4 w-4 text-[#bf7a4e]" />
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#bf7a4e] sm:text-sm">
+            <Sparkles className="h-4 w-4 text-secondary" />
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-secondary sm:text-sm">
               The Big Day Approaches
             </span>
-            <Sparkles className="h-4 w-4 text-[#bf7a4e]" />
+            <Sparkles className="h-4 w-4 text-secondary" />
           </motion.div>
 
-          <h2 className="font-serif text-4xl font-medium tracking-tight text-[#4a332f] sm:text-5xl md:text-7xl">
-            Counting Down to <span className="relative inline-block text-[#bd6f56]">
+          <h2 className="font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl md:text-7xl">
+            Counting Down to <span className="relative inline-block text-primary">
               Forever
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
                 viewBox="0 0 100 20" preserveAspectRatio="none"
@@ -151,7 +151,7 @@ export default function CountdownSection() {
                 <motion.path
                   d="M0 10 Q 25 20, 50 10 T 100 10"
                   fill="none"
-                  stroke="#d79c74"
+                  stroke="var(--secondary)"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -213,8 +213,8 @@ export default function CountdownSection() {
                     </AnimatePresence>
                   </div>
 
-                  <div className="mt-3 rounded-full border border-[#e8c9aa] bg-white/75 px-3 py-1.5 shadow-sm md:mt-5">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#b67852] md:text-xs">
+                  <div className="mt-3 rounded-full border border-secondary/30 bg-white px-3 py-1.5 shadow-sm md:mt-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-secondary md:text-xs">
                       {item.label}
                     </p>
                   </div>

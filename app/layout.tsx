@@ -16,12 +16,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'VIMUKTHI & PIUMI Wedding',
-  description: 'Join us as we celebrate the blessed Christian union of VIMUKTHI and PIUMI on May 30, 2026.',
+  title: 'DON KAVINDU & NIKITHA Wedding',
+  description: 'Join us as we celebrate the wedding of DON KAVINDU and NIKITHA on January 30, 2027.',
   generator: 'v0.app',
   icons: {
-    icon: '/wedding-icon.png',
-    apple: '/wedding-icon.png',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 

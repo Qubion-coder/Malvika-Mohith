@@ -14,7 +14,7 @@ export default function HeroSection() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/IMG_0951.JPG.jpeg)' }}
+        style={{ backgroundImage: 'url(/images/IMG_0472.JPG.jpeg)' }}
       />
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,17,28,0.42)_0%,rgba(20,17,28,0.58)_55%,rgba(20,17,28,0.82)_100%)]" />
@@ -35,52 +35,52 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#f0daaa]/55 bg-black/30 px-5 py-2 backdrop-blur-sm"
+          className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/40 bg-white/10 px-6 py-2.5 backdrop-blur-md"
         >
-          <Cross className="h-4 w-4 text-[#f0daaa]" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#f0daaa] sm:text-xs">
+          <Cross className="h-4 w-4 text-primary" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary sm:text-xs">
             Holy Matrimony
           </span>
-          <Cross className="h-4 w-4 text-[#f0daaa]" />
+          <Cross className="h-4 w-4 text-primary" />
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.1, delay: 0.1 }}
-          className="font-serif text-4xl font-light leading-tight tracking-[0.08em] text-[#fff7e8] sm:text-6xl md:text-7xl lg:text-8xl"
+          className="font-serif text-5xl font-light leading-tight tracking-[0.1em] text-white sm:text-7xl md:text-8xl lg:text-9xl uppercase"
         >
-          VIMUKTHI <span className="text-[#f0daaa]">&amp;</span> PIUMI
+          DON KAVINDU <span className="text-secondary">&amp;</span> NIKITHA
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.25 }}
-          className="mt-5 max-w-3xl text-sm leading-relaxed text-[#f8ead0] sm:text-base md:text-lg"
+          className="mt-6 max-w-3xl text-sm leading-relaxed text-white/90 sm:text-base md:text-lg lg:text-xl font-light"
         >
-          With grateful hearts before God, we invite you to witness our blessed Christian marriage ceremony and celebrate this joyful beginning with our families.
+          Together with their families, joyfully invite you to witness their blessed Christian marriage ceremony and celebrate this beginning with love and grace.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-8 rounded-3xl border border-[#f0daaa]/45 bg-black/35 px-6 py-5 backdrop-blur-sm sm:px-10"
+          className="mt-10 rounded-full border border-secondary/35 bg-black/20 px-10 py-6 backdrop-blur-sm"
         >
-          <p className="text-xs uppercase tracking-[0.28em] text-[#f0daaa]">Wedding Date</p>
-          <p className="mt-2 font-serif text-2xl text-[#fff7e8] sm:text-3xl">May 30, 2026</p>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-secondary font-bold">Wedding Date</p>
+          <p className="mt-2 font-serif text-3xl text-white sm:text-4xl">January 30, 2027</p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.55 }}
-          className="mt-8 flex items-center gap-3 text-[#f0daaa]"
+          className="mt-10 flex items-center gap-4 text-secondary/80"
         >
-          <Sparkles className="h-4 w-4" />
-          <Heart className="h-4 w-4 fill-current" />
-          <Sparkles className="h-4 w-4" />
+          <Sparkles className="h-5 w-5" />
+          <Heart className="h-5 w-5 fill-primary text-primary" />
+          <Sparkles className="h-5 w-5" />
         </motion.div>
       </div>
     </section>

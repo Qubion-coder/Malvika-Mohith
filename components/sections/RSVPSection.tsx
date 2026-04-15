@@ -10,8 +10,7 @@ export default function RSVPSection() {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
   const [formData, setFormData] = useState({
     name: '',
-    guests: '1',
-    dietary: '',
+    attending: 'yes',
   });
   const [submitted, setSubmitted] = useState(false);
   const [isHoveringSubmit, setIsHoveringSubmit] = useState(false);
@@ -35,14 +34,13 @@ export default function RSVPSection() {
       await submitToGoogleSheets({
         formType: 'rsvp',
         name: formData.name,
-        guests: formData.guests,
-        dietary: formData.dietary,
+        attending: formData.attending,
       });
 
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', guests: '1', dietary: '' });
+        setFormData({ name: '', attending: 'yes' });
       }, 4000);
     } catch (error) {
       setSubmitError('Unable to submit right now. Please try again.');
@@ -55,19 +53,19 @@ export default function RSVPSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff8ee_0%,#fff1de_45%,#fbe7d2_100%)] px-4 sm:px-6 lg:px-8 py-24 md:py-32"
+      className="relative overflow-hidden bg-white px-4 sm:px-6 lg:px-8 py-24 md:py-32"
     >
       {/* Premium Ambient Backdrop */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ x: [0, -45, 0], y: [0, -30, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute right-[-10%] top-[-10%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-bl from-[#ffd0d8] to-[#ffe8c8] opacity-70 blur-[100px]"
+          className="absolute right-[-10%] top-[-10%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-bl from-primary/30 to-secondary/20 opacity-70 blur-[100px]"
         />
         <motion.div
           animate={{ x: [0, 40, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute left-[-10%] bottom-[-10%] h-[40vw] w-[40vw] rounded-full bg-gradient-to-tr from-[#e9dbff] to-[#ffdfe9] opacity-60 blur-[100px]"
+          className="absolute left-[-10%] bottom-[-10%] h-[40vw] w-[40vw] rounded-full bg-gradient-to-tr from-secondary/20 to-primary/20 opacity-60 blur-[100px]"
         />
         <div
           className="absolute inset-0 opacity-[0.16]"
@@ -112,8 +110,8 @@ export default function RSVPSection() {
             </span>
           </motion.div>
 
-          <h2 className="font-serif text-5xl font-medium tracking-tight text-[#4d3732] md:text-7xl">
-            You are <span className="relative inline-block text-[#c16f58]">
+          <h2 className="font-serif text-5xl font-medium tracking-tight text-foreground md:text-7xl">
+            You are <span className="relative inline-block text-primary">
               Invited
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
                 viewBox="0 0 100 20" preserveAspectRatio="none"
@@ -132,7 +130,7 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by May 20, 2026. We would be honored to have you join our Christian wedding celebration.
+            Please respond by January 20, 2027. We would be honored to have you join our wedding celebration.
           </p>
         </motion.div>
 
@@ -146,7 +144,7 @@ export default function RSVPSection() {
           {/* Animated Background Envelope Flap Shape */}
           <div className="absolute -top-10 left-1/2 h-32 w-[90%] -translate-x-1/2 rounded-[2rem] bg-white/30 blur-md pointer-events-none" />
 
-          <div className="relative overflow-hidden rounded-[3rem] border border-[#edd8bf] bg-[linear-gradient(150deg,rgba(255,255,255,0.84)_0%,rgba(255,244,228,0.78)_100%)] p-6 md:p-12 shadow-[0_20px_55px_rgba(192,128,88,0.2)] backdrop-blur-2xl">
+          <div className="relative overflow-hidden rounded-[3rem] border border-secondary/25 bg-white p-6 md:p-12 shadow-[0_20px_55px_rgba(181,197,122,0.15)] backdrop-blur-2xl">
 
             {/* Cute internal accents */}
             <div className="absolute left-[-20%] top-[-20%] h-[300px] w-[300px] rounded-full bg-[#f2c59d]/25 blur-[60px]" />
@@ -181,23 +179,21 @@ export default function RSVPSection() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Guests Select */}
+                  <div className="grid grid-cols-1 gap-8">
+                    {/* Attending Select */}
                     <div className="group relative">
                       <label className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c07a54]">
-                        <Users className="h-4 w-4" /> Guests
+                        <Users className="h-4 w-4" /> Will you be attending?
                       </label>
                       <div className="relative">
                         <select
-                          name="guests"
-                          value={formData.guests}
+                          name="attending"
+                          value={formData.attending}
                           onChange={handleChange}
-                          className="w-full appearance-none rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 pr-12 text-[#4a3b3c] outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90 cursor-pointer"
+                          className="w-full appearance-none rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 pr-12 text-[#4a3b3c] outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90 cursor-pointer font-medium"
                         >
-                          <option value="1">1 Guest (Just Me)</option>
-                          <option value="2">2 Guests (Couple)</option>
-                          <option value="3">3 Guests (Plus One)</option>
-                          <option value="4">4 Guests (Family)</option>
+                          <option value="yes">Yes, I'll be there!</option>
+                          <option value="no">Wait for me, I'm coming! (No)</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#c07a54]">
                           <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
@@ -205,21 +201,6 @@ export default function RSVPSection() {
                           </svg>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Dietary Input */}
-                    <div className="group relative">
-                      <label className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c07a54]">
-                        <Coffee className="h-4 w-4" /> Dietary Notes
-                      </label>
-                      <input
-                        type="text"
-                        name="dietary"
-                        value={formData.dietary}
-                        onChange={handleChange}
-                        placeholder="Allergies, Vegan, etc."
-                        className="w-full rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 text-[#4a3b3c] placeholder-[#d5ab90]/70 outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90"
-                      />
                     </div>
                   </div>
 
@@ -232,7 +213,7 @@ export default function RSVPSection() {
                       onHoverEnd={() => setIsHoveringSubmit(false)}
                       type="submit"
                       disabled={isSubmitting}
-                      className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-[#bf7752] px-12 py-5 text-white shadow-[0_10px_30px_rgba(191,119,82,0.38)] transition-all hover:bg-[#ab6240] hover:shadow-[0_15px_40px_rgba(171,98,64,0.45)] border border-[#bf7752]"
+                      className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-secondary px-12 py-5 text-white shadow-[0_10px_30px_rgba(181,197,122,0.38)] transition-all hover:bg-secondary/90 hover:shadow-[0_15px_40px_rgba(181,197,122,0.45)] border border-secondary"
                     >
                       <span className="relative z-10 font-bold tracking-[0.2em] uppercase text-sm">
                         {isSubmitting ? 'Sending...' : 'Send RSVP'}

@@ -16,10 +16,10 @@ export default function CeremonyDetails() {
       key: 'church',
       title: 'Church',
       timeLabel: 'Church Time',
-      timeValue: '9:30 AM',
+      timeValue: '3:00 PM',
       timeSub: 'Holy wedding ceremony',
       venueLabel: 'Church Venue',
-      venueValue: "St. Joseph's Church - Gonawila",
+      venueValue: "Queen of Angels Church - Rawatawatte",
       venueSub: 'Live location available',
     },
     {
@@ -29,7 +29,7 @@ export default function CeremonyDetails() {
       timeValue: '11:30 AM',
       timeSub: 'Reception and celebration',
       venueLabel: 'Function Venue',
-      venueValue: 'Sampath Banquet Hall',
+      venueValue: 'Paradise Inn Bolgoda',
       venueSub: 'Live location available',
     },
   ];
@@ -37,19 +37,14 @@ export default function CeremonyDetails() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#1f0610_0%,#451022_45%,#1b050d_100%)] px-4 sm:px-6 lg:px-8 py-24 md:py-32"
+      className="relative overflow-hidden bg-white px-4 sm:px-6 lg:px-8 py-24 md:py-32"
     >
       {/* Background Ornaments */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-0 top-0 h-full w-full opacity-[0.07] mix-blend-screen"
-          style={{ backgroundImage: `radial-gradient(circle at 20px 20px, #C9A227 1.1px, transparent 1.1px)`, backgroundSize: '36px 36px' }} />
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-[100px]" />
-        <div className="absolute right-0 bottom-0 h-[40rem] w-[40rem] rounded-full bg-[#d81b3f]/10 blur-[120px]" />
-        <motion.div
-          animate={{ y: [0, -22, 0], x: [0, 18, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-10 right-12 h-40 w-40 rounded-full border border-[#C9A227]/30 bg-[#C9A227]/10 blur-[1px]"
-        />
+        <div className="absolute left-0 top-0 h-full w-full opacity-[0.05]"
+          style={{ backgroundImage: `radial-gradient(circle at 20px 20px, var(--secondary) 1px, transparent 1px)`, backgroundSize: '36px 36px' }} />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-primary/5 blur-[100px]" />
+        <div className="absolute right-0 bottom-0 h-[40rem] w-[40rem] rounded-full bg-secondary/5 blur-[120px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -65,48 +60,39 @@ export default function CeremonyDetails() {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border border-[#C9A227]/60 shadow-[0_20px_50px_rgba(201,162,39,0.2)] bg-[linear-gradient(180deg,#1a0408_0%,#2c0710_55%,#120207_100%)]"
+              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-4 border-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] bg-neutral-100"
             >
-              <div className="absolute -inset-6 rounded-t-[220px] rounded-b-[40px] border border-[#C9A227]/20 hidden md:block" />
-              <div className="absolute -inset-3 rounded-t-[210px] rounded-b-[35px] border border-[#C9A227]/40 hidden md:block" />
+              <div className="absolute inset-4 rounded-t-[180px] rounded-b-[20px] border border-secondary/20 hidden md:block" />
 
               <Image
-                src="/images/IMG_2529.JPG.jpeg"
-                alt="Vimukthi and Piumi"
+                src="/images/IMG_0459.JPG.jpeg"
+                alt="Don Kavindu and Nikitha"
                 fill
                 className="object-cover"
                 priority
                 sizes="(max-width: 768px) 100vw, 500px"
               />
 
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,2,7,0.2)_0%,rgba(18,2,7,0.75)_100%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.22),transparent_48%)]" />
-              <div className="absolute inset-0 opacity-[0.14]"
-                style={{ backgroundImage: 'linear-gradient(rgba(201,162,39,0.55) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,0.55) 1px, transparent 1px)', backgroundSize: '38px 38px' }} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,190,198,0.15),transparent_48%)]" />
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-8 text-center text-[#f5e6c8]">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#f0d18b]/40 bg-black/25 px-4 py-1.5 backdrop-blur-sm">
-                  <Cross className="h-3.5 w-3.5 text-[#f4ddab]" />
-                  <p className="text-[10px] uppercase tracking-[0.32em] text-[#f6dd9a] drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]">Blessed Union</p>
+              <div className="relative z-10 flex h-full flex-col items-end justify-end p-8 text-right text-white">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+                  <Cross className="h-3.5 w-3.5 text-white" />
+                  <p className="text-[10px] uppercase tracking-[0.32em] text-white font-bold">Blessed Union</p>
                 </div>
-                <h3 className="mt-5 font-serif text-4xl text-[#fff7de] drop-shadow-[0_4px_16px_rgba(0,0,0,0.75)]">
-                  VIMUKTHI <span className="text-[#f0d18b]">&amp;</span> PIUMI
+                <h3 className="mt-4 font-serif text-4xl text-white uppercase">
+                  DON KAVINDU <span className="text-secondary">&amp;</span> NIKITHA
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[#f5e6c8]/80">
-                  "Love is patient, love is kind." Join us as we exchange vows in faith, gratitude, and joy.
-                </p>
-                <div className="mt-8 h-px w-28 bg-[#C9A227]/50" />
-                <p className="mt-5 text-xs uppercase tracking-[0.28em] text-[#C9A227]">May 30, 2026</p>
               </div>
 
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-2 sm:-right-6 md:-right-10 top-20 md:top-40 flex h-24 w-24 md:h-28 md:w-28 items-center justify-center rounded-full border border-[#C9A227]/40 bg-[#2c0710]/80 shadow-[0_0_30px_rgba(201,162,39,0.3)] backdrop-blur-md"
+                className="absolute -right-4 top-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-primary shadow-xl backdrop-blur-md"
               >
                 <div className="text-center">
-                  <Heart className="mx-auto h-6 w-6 md:h-8 md:w-8 text-[#C9A227] fill-[#C9A227]/20" />
-                  <span className="mt-2 block text-[10px] font-medium uppercase tracking-[0.25em] text-[#f5e6c8]">Forever</span>
+                  <Heart className="mx-auto h-6 w-6 text-white fill-white" />
                 </div>
               </motion.div>
 
@@ -131,19 +117,19 @@ export default function CeremonyDetails() {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#C9A227]/30 bg-[#1a0408]/50 px-5 py-2 backdrop-blur-sm">
-              <Sparkles className="h-4 w-4 text-[#C9A227]" />
-              <span className="text-xs uppercase tracking-[0.3em] text-[#C9A227] font-medium">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-secondary/30 bg-secondary/5 px-5 py-2 backdrop-blur-sm">
+              <Sparkles className="h-4 w-4 text-secondary" />
+              <span className="text-xs uppercase tracking-[0.3em] text-secondary font-bold">
                 The Sacred Celebration
               </span>
             </div>
 
-            <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-[#f5e6c8] md:text-7xl">
+            <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-foreground md:text-7xl">
               Wedding <br />
-              <span className="italic text-[#C9A227]">Ceremony</span>
+              <span className="italic text-primary">Ceremony</span>
             </h2>
 
-            <p className="mb-12 text-lg leading-relaxed text-[#f5e6c8]/70 max-w-lg">
+            <p className="mb-12 text-lg leading-relaxed text-foreground/70 max-w-lg">
               With immense joy in our hearts, we invite you to share our happiness as we exchange our vows before God. Join us for a sacred Christian celebration of faith, love, and lifelong commitment.
             </p>
 
@@ -155,37 +141,37 @@ export default function CeremonyDetails() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                    whileHover={{ x: 10, backgroundColor: 'rgba(201,162,39,0.08)' }}
-                    className="group relative overflow-hidden rounded-2xl border border-[#C9A227]/25 bg-[linear-gradient(120deg,rgba(44,7,16,0.72)_0%,rgba(62,13,25,0.55)_100%)] p-5 shadow-lg backdrop-blur-md transition-all cursor-default"
+                    whileHover={{ x: 10, backgroundColor: 'rgba(255,190,198,0.05)' }}
+                    className="group relative overflow-hidden rounded-2xl border border-secondary/20 bg-white p-5 shadow-sm transition-all cursor-default"
                   >
-                    <div className="absolute left-0 top-0 w-1 h-full bg-[#C9A227] scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
+                    <div className="absolute left-0 top-0 w-1 h-full bg-secondary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
 
                     <div className="mb-4">
-                      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70">{group.title} Details</p>
+                      <p className="text-xs uppercase tracking-[0.25em] text-secondary/70 font-bold">{group.title} Details</p>
                     </div>
 
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
-                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C9A227]/30 bg-gradient-to-br from-[#4a0f18] to-[#1a0408] shadow-inner">
-                          <Clock3 className="h-5 w-5 text-[#C9A227]" />
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-secondary/10 shadow-inner">
+                          <Clock3 className="h-5 w-5 text-secondary" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70 mb-1">{group.timeLabel}</p>
-                          <h3 className="font-serif text-2xl text-[#f5e6c8]">{group.timeValue}</h3>
-                          <p className="text-sm text-[#f5e6c8]/50 mt-1">{group.timeSub}</p>
+                          <p className="text-xs uppercase tracking-[0.25em] text-secondary font-bold mb-1">{group.timeLabel}</p>
+                          <h3 className="font-serif text-2xl text-foreground font-semibold">{group.timeValue}</h3>
+                          <p className="text-sm text-foreground/60 mt-1">{group.timeSub}</p>
                         </div>
                       </div>
 
-                      <div className="h-px w-full bg-[#C9A227]/20" />
+                      <div className="h-px w-full bg-secondary/10" />
 
                       <div className="flex items-start gap-4">
-                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C9A227]/30 bg-gradient-to-br from-[#4a0f18] to-[#1a0408] shadow-inner">
-                          <MapPin className="h-5 w-5 text-[#C9A227]" />
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-secondary/30 bg-secondary/10 shadow-inner">
+                          <MapPin className="h-5 w-5 text-secondary" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70 mb-1">{group.venueLabel}</p>
-                          <h3 className="font-serif text-2xl text-[#f5e6c8]">{group.venueValue}</h3>
-                          <p className="text-sm text-[#f5e6c8]/50 mt-1">{group.venueSub}</p>
+                          <p className="text-xs uppercase tracking-[0.25em] text-secondary font-bold mb-1">{group.venueLabel}</p>
+                          <h3 className="font-serif text-2xl text-foreground font-semibold">{group.venueValue}</h3>
+                          <p className="text-sm text-foreground/60 mt-1">{group.venueSub}</p>
                         </div>
                       </div>
                     </div>
@@ -198,18 +184,18 @@ export default function CeremonyDetails() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 1, delay: 0.9 }}
-              className="mt-12 overflow-hidden rounded-2xl border border-[#C9A227]/20 bg-[linear-gradient(135deg,rgba(74,15,24,0.4),rgba(26,4,8,0.8))] p-6 shadow-2xl backdrop-blur-lg relative"
+              className="mt-12 overflow-hidden rounded-2xl border border-secondary/20 bg-secondary/5 p-6 shadow-sm backdrop-blur-lg relative"
             >
               <div className="absolute right-0 top-0 opacity-10">
-                <Crown className="w-32 h-32 -mt-8 -mr-8 text-[#C9A227]" />
+                <Crown className="w-32 h-32 -mt-8 -mr-8 text-secondary" />
               </div>
 
-              <h4 className="text-xs uppercase tracking-widest text-[#C9A227] mb-3 font-semibold flex items-center gap-2">
-                <span className="w-6 h-[1px] bg-[#C9A227]"></span> Guest Notes
+              <h4 className="text-xs uppercase tracking-widest text-secondary mb-3 font-bold flex items-center gap-2">
+                <span className="w-6 h-[1px] bg-secondary"></span> Guest Notes
               </h4>
               <div className="space-y-2">
-                <p className="text-[#f5e6c8]/80 text-sm md:text-base"><span className="text-[#C9A227]">Dress Code:</span> Church Formal / Elegant Attire</p>
-                <p className="text-[#f5e6c8]/80 text-sm md:text-base"><span className="text-[#C9A227]">Reception:</span> Function starts at 11:30 AM at Sampath Banquet Hall</p>
+                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Dress Code:</span> Church Formal / Elegant Attire</p>
+                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Reception:</span> Function starts at 11:30 AM at Paradise Inn Bolgoda</p>
               </div>
             </motion.div>
 
