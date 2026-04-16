@@ -175,7 +175,7 @@ export default function VenueLocation() {
               <div className="mt-5 rounded-2xl border border-secondary/20 bg-secondary/5 p-4">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Function Venue</p>
                 <h4 className="mt-2 font-serif text-xl text-foreground font-semibold">Paradise Inn Bolgoda</h4>
-                <p className="mt-2 text-xs text-foreground/70 font-medium">Function starts at 11:30 AM</p>
+                <p className="mt-2 text-xs text-foreground/70 font-medium">Function starts at 6:00 PM</p>
                 <a
                   href={FUNCTION_LOCATION_URL}
                   target="_blank"
