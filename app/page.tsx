@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { EnvelopeOpener } from '@/components/envelope-opener';
 import HeroSection from '@/components/sections/HeroSection';
+import ParentsSection from '@/components/sections/ParentsSection';
 
 import CeremonyDetails from '@/components/sections/CeremonyDetails';
 import CountdownSection from '@/components/sections/CountdownSection';
@@ -31,6 +32,7 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
+          <ParentsSection />
 
           <CeremonyDetails />
           <CountdownSection />
