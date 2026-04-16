@@ -16,21 +16,21 @@ export default function CeremonyDetails() {
       key: 'church',
       title: 'Church',
       timeLabel: 'Church Time',
-      timeValue: '3:00 PM',
+      timeValue: '9.30 AM',
       timeSub: 'Holy wedding ceremony',
       venueLabel: 'Church Venue',
-      venueValue: "Queen of Angels Church - Rawatawatte",
-      venueSub: 'Live location available',
+      venueValue: "CHIESA DI SAN BERNARDINO",
+      venueSub: 'PIAZZA SANTO STEFANO 20122 MILANO MI',
     },
     {
       key: 'function',
-      title: 'Function',
-      timeLabel: 'Function Time',
-      timeValue: '6:00 PM',
-      timeSub: 'Reception and celebration',
-      venueLabel: 'Function Venue',
-      venueValue: 'Paradise Inn Bolgoda',
-      venueSub: 'Live location available',
+      title: 'Reception',
+      timeLabel: 'Reception Time',
+      timeValue: '12:30 TO 17:30 PM',
+      timeSub: 'Followed by the Reception',
+      venueLabel: 'Reception Venue',
+      venueValue: 'VILLA RESTA MARI',
+      venueSub: 'PIAZZA GIUSEPPE RESTA, 9, 20009 VITTUONE MI',
     },
   ];
 
@@ -39,6 +39,14 @@ export default function CeremonyDetails() {
       ref={ref}
       className="relative overflow-hidden bg-white px-4 sm:px-6 lg:px-8 py-24 md:py-32"
     >
+      {/* Corner Decor */}
+      <div className="absolute top-0 right-0 w-40 h-40 md:w-72 md:h-72 pointer-events-none z-0 opacity-95">
+        <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
+      </div>
+      <div className="absolute bottom-0 left-0 w-32 h-[400px] md:w-64 md:h-[600px] pointer-events-none z-0 opacity-95">
+        <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
+      </div>
+
       {/* Background Ornaments */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 h-full w-full opacity-[0.05]"
@@ -51,64 +59,75 @@ export default function CeremonyDetails() {
         <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 md:gap-16 lg:gap-24">
 
           {/* Visual Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -50, rotate: -5 }}
-            animate={inView ? { opacity: 1, x: 0, rotate: 0 } : {}}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full lg:w-1/2 relative flex justify-center perspective-[1000px]"
-          >
+          <div className="w-full lg:w-1/2 relative flex justify-center items-center h-[550px] sm:h-[600px] md:h-[700px] px-4 md:px-8">
+            {/* Background floating Image (2.jpeg) - Positioned Top-Left */}
             <motion.div
-              whileHover={{ scale: 1.02, rotateY: 5 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-4 border-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] bg-neutral-100"
+              initial={{ opacity: 0, scale: 0.8, x: -40, y: -40 }}
+              animate={inView ? { opacity: 1, scale: 1, x: 0, y: 0 } : {}}
+              transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
+              className="absolute left-[5%] top-[8%] w-[60%] md:w-[65%] h-[50%] md:h-[55%] z-0"
             >
-              <div className="absolute inset-4 rounded-t-[180px] rounded-b-[20px] border border-secondary/20 hidden md:block" />
-
-              <Image
-                src="/images/IMG_0459.JPG.jpeg"
-                alt="Don Kavindu and Nikitha"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 500px"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,190,198,0.15),transparent_48%)]" />
-
-              <div className="relative z-10 flex h-full flex-col items-end justify-end p-8 text-right text-white">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-                  <Cross className="h-3.5 w-3.5 text-white" />
-                  <p className="text-[10px] uppercase tracking-[0.32em] text-white font-bold">Blessed Union</p>
-                </div>
-                <h3 className="mt-4 font-serif text-4xl text-white uppercase">
-                  DON KAVINDU <span className="text-secondary">&amp;</span> NIKITHA
-                </h3>
+              <div className="relative w-full h-full overflow-hidden rounded-[30px] md:rounded-[40px] border-4 md:border-8 border-white shadow-xl md:shadow-2xl">
+                <Image
+                  src="/images/2.jpeg"
+                  alt="Celebration"
+                  fill
+                  className="object-cover brightness-105"
+                />
               </div>
-
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-4 top-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-primary shadow-xl backdrop-blur-md"
-              >
-                <div className="text-center">
-                  <Heart className="mx-auto h-6 w-6 text-white fill-white" />
-                </div>
-              </motion.div>
-
-              {/* Sparkle effects */}
-              <motion.div
-                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute left-10 top-20 h-3 w-3 rounded-full bg-[#fdf8f0] blur-[2px]"
-              />
-              <motion.div
-                animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.8, 0.3] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute right-20 bottom-32 h-4 w-4 rounded-full bg-[#C9A227] blur-[2px]"
-              />
             </motion.div>
-          </motion.div>
+
+            {/* Foreground arched Image (4.jpeg) - Positioned Bottom-Right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 40, y: 40 }}
+              animate={inView ? { opacity: 1, scale: 1, x: 0, y: 0 } : {}}
+              transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+              className="absolute right-[5%] bottom-[5%] w-[70%] md:w-[75%] h-[65%] md:h-[70%] z-10"
+            >
+              <div className="relative w-full h-full overflow-hidden rounded-t-[100px] md:rounded-t-[200px] rounded-b-[30px] md:rounded-b-[40px] border-4 md:border-8 border-white shadow-[0_30px_70px_rgba(0,0,0,0.2)] md:shadow-[0_45px_100px_rgba(0,0,0,0.25)]">
+                 <Image
+                  src="/images/4.jpeg"
+                  alt="Blessed Union"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                
+                <div className="absolute bottom-5 md:bottom-10 left-0 right-0 text-center px-4">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-3 py-1.5 md:px-4 md:py-2 backdrop-blur-md mb-2 md:mb-3">
+                    <Cross className="h-3.5 w-3.5 text-white" />
+                    <p className="text-[10px] md:text-xs uppercase tracking-[0.32em] text-white font-bold">Blessed Union</p>
+                  </div>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-white uppercase">
+                    THUSHANI <span className="text-secondary">&amp;</span> VIMUKTHI
+                  </h3>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating Heart Accent */}
+            <motion.div
+              animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute right-[0%] top-[15%] md:right-[-5%] md:top-[15%] z-20 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full border-4 border-white bg-primary shadow-xl backdrop-blur-md"
+            >
+              <Heart className="h-6 w-6 text-white fill-white" />
+            </motion.div>
+
+            {/* Sparkle effects */}
+            <motion.div
+              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute left-4 top-10 z-20 h-2 w-2 md:h-3 md:w-3 rounded-full bg-[#fdf8f0] blur-[1px]"
+            />
+            <motion.div
+              animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.8, 0.3] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+              className="absolute right-10 bottom-40 z-20 h-3 w-3 md:h-4 md:w-4 rounded-full bg-[#C9A227] blur-[1px]"
+            />
+          </div>
 
           {/* Details Side */}
           <motion.div
@@ -124,7 +143,7 @@ export default function CeremonyDetails() {
               </span>
             </div>
 
-            <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-foreground md:text-7xl">
+            <h2 className="mb-6 font-serif text-4xl font-light leading-tight text-foreground md:text-7xl">
               Wedding <br />
               <span className="italic text-primary">Ceremony</span>
             </h2>
@@ -157,7 +176,7 @@ export default function CeremonyDetails() {
                         </div>
                         <div>
                           <p className="text-xs uppercase tracking-[0.25em] text-secondary font-bold mb-1">{group.timeLabel}</p>
-                          <h3 className="font-serif text-2xl text-foreground font-semibold">{group.timeValue}</h3>
+                          <h3 className="font-serif text-3xl text-foreground font-semibold">{group.timeValue}</h3>
                           <p className="text-sm text-foreground/60 mt-1">{group.timeSub}</p>
                         </div>
                       </div>
@@ -170,7 +189,7 @@ export default function CeremonyDetails() {
                         </div>
                         <div>
                           <p className="text-xs uppercase tracking-[0.25em] text-secondary font-bold mb-1">{group.venueLabel}</p>
-                          <h3 className="font-serif text-2xl text-foreground font-semibold">{group.venueValue}</h3>
+                          <h3 className="font-serif text-3xl text-foreground font-semibold">{group.venueValue}</h3>
                           <p className="text-sm text-foreground/60 mt-1">{group.venueSub}</p>
                         </div>
                       </div>
@@ -195,7 +214,7 @@ export default function CeremonyDetails() {
               </h4>
               <div className="space-y-2">
                 <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Dress Code:</span> Church Formal / Elegant Attire</p>
-                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Reception:</span> Function starts at 6:00 PM at Paradise Inn Bolgoda</p>
+                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Reception:</span> Followed by the Reception at VILLA RESTA MARI FROM 12:30 TO 17:30 PM</p>
               </div>
             </motion.div>
 

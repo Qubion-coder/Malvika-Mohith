@@ -106,7 +106,7 @@ export default function RSVPSection() {
           >
             <Mail className="h-5 w-5 text-[#bf7752]" />
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf7752]">
-              Join the Celebration
+              RSVP (REGRETS ONLY)
             </span>
           </motion.div>
 
@@ -130,7 +130,8 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by January 20, 2027. We would be honored to have you join our wedding celebration.
+            Please respond by June 01, 2026. <br />
+            <span className="font-bold text-[#bf7752]">39 3755578757-39 3890044224</span>
           </p>
         </motion.div>
 
@@ -145,6 +146,14 @@ export default function RSVPSection() {
           <div className="absolute -top-10 left-1/2 h-32 w-[90%] -translate-x-1/2 rounded-[2rem] bg-white/30 blur-md pointer-events-none" />
 
           <div className="relative overflow-hidden rounded-[3rem] border border-secondary/25 bg-white p-6 md:p-12 shadow-[0_20px_55px_rgba(181,197,122,0.15)] backdrop-blur-2xl">
+            {/* Corner Decor */}
+            <div className="absolute top-0 right-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none z-0 opacity-95">
+              <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
+            </div>
+            <div className="absolute bottom-0 left-0 w-24 h-[250px] md:w-56 md:h-[450px] pointer-events-none z-0 opacity-95">
+              <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
+            </div>
+
 
             {/* Cute internal accents */}
             <div className="absolute left-[-20%] top-[-20%] h-[300px] w-[300px] rounded-full bg-[#f2c59d]/25 blur-[60px]" />

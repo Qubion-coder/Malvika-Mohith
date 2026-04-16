@@ -191,12 +191,12 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             >
               <div className="mb-3 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-                <p className="text-[10px] uppercase tracking-[0.45em] text-[#f5e6c8]/80">
+                <p className="hidden md:block text-[10px] uppercase tracking-[0.45em] text-[#f5e6c8]/80">
                   A Wedding Invitation
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
               </div>
-              <p className="text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
+              <p className="hidden md:block text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
                 Unveil the moment
               </p>
             </motion.div>
@@ -336,9 +336,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       className="translate-y-4"
                     >
                       <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.05)] flex items-center justify-center gap-4 sm:gap-6 uppercase">
-                        <span>DON</span>
+                        <span>THUSHANI</span>
                         <span aria-hidden="true">&amp;</span>
-                        <span>NIKI</span>
+                        <span>VIMUKTHI</span>
                       </h3>
                       <div className="mt-4 flex items-center justify-center gap-3">
                         <span className="h-px w-10 bg-secondary/50" />
@@ -358,7 +358,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     }}
                     className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/40 bg-[radial-gradient(circle_at_30%_30%,#ffbec6_0%,#ff99aa_55%,#ff7799_100%)] shadow-[0_10px_30px_rgba(255,190,198,0.45)]"
                   >
-                    <span className="font-serif text-lg text-white">D ✦ N</span>
+                    <span className="font-serif text-lg text-white">T ✦ V</span>
                   </motion.div>
 
                   {/* Hover sheen */}
@@ -396,22 +396,22 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     {/* Card frame */}
                     <div className="absolute inset-3 rounded-[18px] border border-[#C9A227]/25" />
                     <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-[#C9A227]/50 bg-white/70 text-center text-[10px] leading-8 text-[#8c6a16] font-bold">
-                      DN
+                      TV
                     </div>
 
                     {/* Card ornament */}
                     <div className="relative text-center">
                       <div className="space-y-2 mb-3">
-                        <p className="text-[9px] uppercase tracking-[0.28em] text-[#8c6a16]">
+                        <p className="text-[11px] uppercase tracking-[0.1em] text-[#8c6a16]">
                           Together with their families
                         </p>
-                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
+                        <p className="text-[11px] leading-4 text-[#6a4d0d]">
                           Bride, the loving daughter of<br />
-                          <span className="font-semibold">T H ANUSHA SHIRANTHI</span> (Mother) and <span className="font-semibold">G DAYAWANSA</span> (Father)
+                          <span className="font-semibold">MR. KENAT PERERA</span> and <span className="font-semibold">MRS. SEPALIKA FERNANDO</span>
                         </p>
-                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
+                        <p className="text-[11px] leading-4 text-[#6a4d0d]">
                           Groom, the loving son of<br />
-                          <span className="font-semibold">M HELAN DAMMIKA FERNANDO</span> (Mother) and <span className="font-semibold">W A NELSON MERIL FERNANDO</span> (Father)
+                          <span className="font-semibold">MR. (LATE) NAGAHAGE BERNARD</span> and <span className="font-semibold">MRS. MARI LOWE</span>
                         </p>
                       </div>
 
@@ -421,12 +421,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         <span className="h-px w-10 bg-[#C9A227]/45" />
                       </div>
 
-                      <h2 className="mt-5 font-serif text-4xl font-light tracking-[0.08em] text-[#6d1424] uppercase">
-                        DON KAVINDU
-                      </h2>
-                      <p className="mt-1 font-serif text-lg italic text-[#b08a1f]">&</p>
-                      <h2 className="font-serif text-4xl font-light tracking-[0.08em] text-[#6d1424] uppercase">
-                        NIKITHA REIMERS
+                      <h2 className="mt-5 font-serif text-3xl sm:text-5xl font-light tracking-[0.1em] text-[#6a4d0d] uppercase">
+                        THUSHANI <span className="text-secondary">&amp;</span> VIMUKTHI
                       </h2>
 
                       <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-[#5f5146]">
@@ -439,8 +435,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         <span className="h-px w-10 bg-[#C9A227]/45" />
                       </div>
 
-                      <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-[#8c6a16]">
-                        January 30, 2027
+                      <p className="mt-5 text-sm uppercase tracking-[0.2em] text-[#8c6a16]">
+                        June 06, 2026
                       </p>
                     </div>
                   </div>

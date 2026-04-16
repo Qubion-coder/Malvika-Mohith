@@ -79,6 +79,14 @@ export default function BlessingsSection() {
       ref={ref}
       className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff5f6_45%,#ffeff1_100%)] px-4 py-24 sm:px-6 lg:px-8 md:py-32"
     >
+      {/* Corner Decor */}
+      <div className="absolute top-0 right-0 w-40 h-40 md:w-72 md:h-72 pointer-events-none z-0 opacity-95">
+        <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
+      </div>
+      <div className="absolute bottom-0 left-0 w-32 h-[400px] md:w-64 md:h-[600px] pointer-events-none z-0 opacity-95">
+        <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
+      </div>
+
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.2, 1] }}

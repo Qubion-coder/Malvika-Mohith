@@ -1,14 +1,20 @@
 'use client';
 
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Heart, Users } from 'lucide-react';
+import { Heart, Users, MapPin } from 'lucide-react';
 
-export default function ParentsSection() {
+function ParentsSectionContent() {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
+
+  const searchParams = useSearchParams();
+  const guestName = searchParams.get('u');
+  const tableNumber = searchParams.get('t');
 
   return (
     <section
@@ -22,74 +28,98 @@ export default function ParentsSection() {
         <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/5 rounded-full blur-3xl opacity-50" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 mb-4">
-            <Users className="h-4 w-4 text-secondary" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary">With the Blessings of Parents</span>
-          </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground font-light tracking-tight">
-            Our Beloved <span className="italic text-primary font-normal">Families</span>
-          </h2>
-        </motion.div>
+      {/* Corner Decor */}
+      <div className="absolute top-0 right-0 w-40 h-40 md:w-72 md:h-72 pointer-events-none z-0 opacity-95">
+        <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
+      </div>
+      <div className="absolute bottom-0 left-0 w-32 h-[400px] md:w-64 md:h-[600px] pointer-events-none z-0 opacity-95">
+        <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-px relative">
-          {/* Groom's Side */}
+      <div className="relative z-10 mx-auto max-w-6xl">
+
+
+        {/* Personalized Invitation Card */}
+        {guestName && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-20 text-center"
+          >
+            <div className="relative inline-block w-full max-w-3xl overflow-hidden rounded-[3rem] border border-primary/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,248,249,0.98))] p-8 md:p-14 shadow-[0_30px_70px_rgba(255,190,198,0.15)] backdrop-blur-xl">
+              {/* Internal Card Decor */}
+              <div className="absolute top-[-10%] right-[-10%] h-[150px] w-[150px] rounded-full bg-primary/5 blur-[40px]" />
+              <div className="absolute bottom-[-10%] left-[-10%] h-[150px] w-[150px] rounded-full bg-secondary/5 blur-[40px]" />
+
+              <div className="relative z-10">
+                <p className="text-secondary font-bold uppercase tracking-[0.32em] text-[10px] md:text-xs mb-6">You are cordially invited</p>
+                <h3 className="font-serif text-3xl md:text-6xl text-primary mb-6 leading-tight font-light tracking-wide">{guestName}</h3>
+                <p className="text-foreground/60 text-sm md:text-base leading-relaxed max-w-xl mx-auto font-medium mb-10">
+                  We would be honored to have your presence on our special day. Your love, prayers, and support have been an essential part of our journey, and we look forward to celebrating this beginning with you.
+                </p>
+
+                {tableNumber && (
+                  <div className="relative mt-8 pt-8 text-center">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                    <div className="flex items-center justify-center gap-2 text-secondary mb-2">
+                      <MapPin size={16} className="animate-bounce" />
+                      <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em]">Reserved Seating</span>
+                    </div>
+                    <p className="font-serif text-2xl md:text-4xl text-foreground font-light">
+                      TABLE NUMBER <span className="text-primary font-bold ml-1">{tableNumber}</span>
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col items-center text-center px-4 md:px-12"
+            className="w-full lg:w-1/3"
           >
-            <div className="mb-6 relative">
-              <div className="p-3 rounded-full border-2 border-primary/20 bg-white">
-                <Heart className="h-6 w-6 text-primary fill-primary/10" />
-              </div>
-            </div>
-
-            <div className="space-y-2 mb-6">
-              <h3 className="font-serif text-3xl text-primary uppercase tracking-wider">Don Kavindu</h3>
-              <p className="text-sm italic text-foreground/50 font-medium">Son of</p>
-            </div>
-
-            <div className="space-y-1">
-              <p className="font-serif text-2xl text-foreground">Achala Duminda</p>
-              <p className="text-secondary/40 text-sm font-bold uppercase tracking-[0.2em]">&amp;</p>
-              <p className="font-serif text-2xl text-foreground">Kumudini Priyanka</p>
+            <div className="relative h-80 md:h-[450px] rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
+              <img src="/images/1.jpeg" alt="Couple" className="w-full h-full object-cover" />
             </div>
           </motion.div>
-
-          {/* Bride's Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col items-center text-center px-4 md:px-12"
-          >
-            <div className="mb-6 relative">
-              <div className="p-3 rounded-full border-2 border-secondary/20 bg-white">
-                <Heart className="h-6 w-6 text-secondary fill-secondary/10" />
+          <div className="flex-1 text-center lg:text-left px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="space-y-6"
+            >
+              <div className="space-y-4">
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. KENAT PERERA &amp; MRS. SEPALIKA FERNANDO</p>
+                <p className="text-secondary font-bold uppercase tracking-[0.2em]">Together with</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. (LATE) NAGAHAGE BERNARD &amp; MRS. MARI LOWE</p>
               </div>
-            </div>
 
-            <div className="space-y-2 mb-6">
-              <h3 className="font-serif text-3xl text-secondary uppercase tracking-wider">Nikitha</h3>
-              <p className="text-sm italic text-foreground/50 font-medium">Daughter of</p>
-            </div>
+              <div className="py-6">
+                <div className="h-px w-24 bg-gradient-to-r from-transparent via-secondary/30 to-transparent mx-auto lg:mx-0" />
+              </div>
 
-            <div className="space-y-1">
-              <p className="font-serif text-2xl text-foreground">Jimmy Rickado Reimers</p>
-              <p className="text-primary/40 text-sm font-bold uppercase tracking-[0.2em]">&amp;</p>
-              <p className="font-serif text-2xl text-foreground">Ishwara Angela</p>
-            </div>
-          </motion.div>
+              <div className="space-y-4">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-secondary">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
+                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">THUSHANI &amp; VIMUKTHI</h3>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+export default function ParentsSection() {
+  return (
+    <Suspense fallback={<div className="h-40" />}>
+      <ParentsSectionContent />
+    </Suspense>
   );
 }

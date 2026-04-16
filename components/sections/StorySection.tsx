@@ -12,6 +12,7 @@ const storyItems = [
     title: "How We Met",
     subtitle: "2012",
     content: "We met in 2012, 14 years ago. What began as friendship slowly grew into deep love, trust, and a lifelong bond.",
+    image: "/images/3.jpeg",
     icon: Stars,
     color: "#ffbec6",
     gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
@@ -24,6 +25,7 @@ const storyItems = [
     title: "Years Together",
     subtitle: "14 Years of Love",
     content: "Over the years, we supported each other through every season of life. Today, with grateful hearts, we are ready to begin our forever as husband and wife.",
+    image: "/images/1.jpeg",
     icon: BookHeart,
     color: "#b5c57a",
     gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
@@ -36,6 +38,7 @@ const storyItems = [
     title: "The Promise",
     subtitle: "A Sacred Yes",
     content: "With prayer and joy, we said yes to this new chapter. Your love and blessings make this day even more meaningful.",
+    image: "/images/4.jpeg",
     icon: Camera,
     color: "#ffbec6",
     gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
@@ -48,6 +51,7 @@ const storyItems = [
     title: "Forever Begins",
     subtitle: "Our Wedding Day",
     content: "Now we celebrate our wedding day with the people we love. Thank you for being part of our story.",
+    image: "/images/2.jpeg",
     icon: PartyPopper,
     color: "#b5c57a",
     gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
@@ -172,71 +176,89 @@ export default function StorySection() {
               />
             </AnimatePresence>
 
-            {/* Content */}
-            <div className="relative z-10 flex flex-col justify-between h-full px-10 py-7 md:p-10">
-              <AnimatePresence custom={dir} mode="wait">
-                <motion.div
-                  key={`content-${active}`}
-                  custom={dir}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex flex-col gap-5 h-full justify-between"
-                >
-                  {/* Top row */}
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#c0a0a8]">{item.chapter}</span>
-                      <h3 className="font-serif text-3xl md:text-4xl text-[#4a3b3c] mt-1 leading-tight">{item.title}</h3>
-                      <p className="text-sm font-semibold text-[#9a7a7e] mt-1">{item.subtitle}</p>
-                    </div>
-                    {/* Icon bubble */}
-                    <div
-                      className="shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shadow-lg"
-                      style={{ backgroundColor: `${item.color}18`, border: `2px solid ${item.color}30` }}
-                    >
-                      <Icon className="w-7 h-7 md:w-8 md:h-8" style={{ color: item.color }} />
-                    </div>
-                  </div>
+            {/* Content Container */}
+            <div className="relative z-10 flex flex-col md:flex-row h-full">
+              {/* Image Section */}
+              <div className="relative w-full md:w-2/5 h-48 md:h-auto overflow-hidden">
+                <AnimatePresence custom={dir} mode="wait">
+                  <motion.div
+                    key={`img-${active}`}
+                    custom={dir}
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute inset-0"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
 
-                  {/* Story text */}
-                  <p className="text-[#6e5457] text-base md:text-lg leading-relaxed font-medium flex-1 flex items-center">
-                    {item.content}
-                  </p>
+              {/* Text Section */}
+              <div className="relative flex-1 flex flex-col justify-between px-8 py-6 md:p-10">
+                <AnimatePresence custom={dir} mode="wait">
+                  <motion.div
+                    key={`content-${active}`}
+                    custom={dir}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex flex-col gap-4 h-full justify-between"
+                  >
+                    {/* Top row */}
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#c0a0a8]">{item.chapter}</span>
+                        <h3 className="font-serif text-3xl text-[#4a3b3c] mt-1 leading-tight">{item.title}</h3>
+                        <p className="text-sm font-semibold text-[#9a7a7e] mt-1">{item.subtitle}</p>
+                      </div>
+                      <div
+                        className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-md bg-white/80"
+                        style={{ border: `1px solid ${item.color}30` }}
+                      >
+                        <Icon className="w-6 h-6" style={{ color: item.color }} />
+                      </div>
+                    </div>
 
-                  {/* Bottom row */}
-                  <div className="flex items-center justify-between flex-wrap gap-3">
-                    <div className="hidden md:flex items-center gap-1.5">
-                      {storyItems.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => go(i)}
-                          className="transition-all duration-300"
-                        >
+                    {/* Story text */}
+                    <p className="text-[#6e5457] text-sm md:text-base leading-relaxed font-medium flex-1 flex items-center py-4">
+                      {item.content}
+                    </p>
+
+                    {/* Bottom row */}
+                    <div className="flex items-center justify-between">
+                      <div className="hidden md:flex items-center gap-1.5">
+                        {storyItems.map((_, i) => (
                           <div
+                            key={i}
                             className="rounded-full transition-all duration-300"
                             style={{
-                              width: active === i ? 24 : 8,
-                              height: 8,
+                              width: active === i ? 20 : 6,
+                              height: 6,
                               backgroundColor: active === i ? item.color : '#e8d5d8',
                             }}
                           />
-                        </button>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
 
-                    {/* Tag pill */}
-                    <span
-                      className="text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full text-white shadow-sm"
-                      style={{ backgroundColor: item.color }}
-                    >
-                      {item.tag}
-                    </span>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+                      <span
+                        className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-white shadow-sm"
+                        style={{ backgroundColor: item.color }}
+                      >
+                        {item.tag}
+                      </span>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
 
             {/* Arrow nav buttons — only inside card on md+ */}
