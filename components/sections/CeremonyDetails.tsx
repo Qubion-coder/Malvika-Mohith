@@ -26,7 +26,7 @@ export default function CeremonyDetails() {
       key: 'function',
       title: 'Function',
       timeLabel: 'Function Time',
-      timeValue: '11:30 AM',
+      timeValue: '6:00 PM',
       timeSub: 'Reception and celebration',
       venueLabel: 'Function Venue',
       venueValue: 'Paradise Inn Bolgoda',
@@ -195,7 +195,7 @@ export default function CeremonyDetails() {
               </h4>
               <div className="space-y-2">
                 <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Dress Code:</span> Church Formal / Elegant Attire</p>
-                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Reception:</span> Function starts at 11:30 AM at Paradise Inn Bolgoda</p>
+                <p className="text-foreground/80 text-sm md:text-base font-medium"><span className="text-secondary font-bold">Reception:</span> Function starts at 6:00 PM at Paradise Inn Bolgoda</p>
               </div>
             </motion.div>
 
