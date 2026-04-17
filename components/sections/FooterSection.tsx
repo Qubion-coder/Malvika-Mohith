@@ -41,10 +41,6 @@ export default function FooterSection() {
               <p className="text-[8px] tracking-[0.2em] leading-relaxed">
                 DESIGN AND CREATED BY <span className="text-white">INVITEMINT</span> | CONNECT WHATSAPP: <a href="https://wa.me/94707819074" target="_blank" className="text-white hover:underline">+94 70 781 9074</a>
               </p>
-
-              <p className="text-[8px] tracking-[0.1em] flex items-center justify-center gap-1.5 opacity-60">
-                CRAFTED WITH <Heart className="h-2.5 w-2.5 fill-primary text-primary" /> FOR YOUR SPECIAL DAY
-              </p>
             </div>
           </div>
         </motion.div>

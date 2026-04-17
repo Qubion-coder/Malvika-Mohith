@@ -130,8 +130,8 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by June 01, 2026. <br />
-            <span className="font-bold text-[#bf7752]">39 3755578757-39 3890044224</span>
+            Please respond by May 23, 2026. <br />
+            <span className="font-bold text-[#bf7752]">3203513816 - Kenat | 3890044224 - Thushani</span>
           </p>
         </motion.div>
 
@@ -202,7 +202,7 @@ export default function RSVPSection() {
                           className="w-full appearance-none rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 pr-12 text-[#4a3b3c] outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90 cursor-pointer font-medium"
                         >
                           <option value="yes">Yes, I'll be there!</option>
-                          <option value="no">Wait for me, I'm coming! (No)</option>
+                          <option value="no">Regretfully decline</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#c07a54]">
                           <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">

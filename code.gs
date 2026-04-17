@@ -1,6 +1,6 @@
 function doPost(e) {
   try {
-    var spreadsheetId = '1rRXSwHlgJbFhVVsCGf1CWLzDH4JcWOcDp0zyZJmDJ58';
+    var spreadsheetId = '167B6V4amw3qs2tZEwN5LwtNxb2gJTFM27lpE7zjKrdA';
     var ss = SpreadsheetApp.openById(spreadsheetId);
 
     var body = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -16,12 +16,13 @@ function doPost(e) {
       }
 
       if (rsvpSheet.getLastRow() === 0) {
-        rsvpSheet.appendRow(['submittedAt', 'name', 'guests', 'dietary', 'source']);
+        rsvpSheet.appendRow(['submittedAt', 'name', 'attending', 'guests', 'dietary', 'source']);
       }
 
       rsvpSheet.appendRow([
         submittedAt,
         payload.name || '',
+        payload.attending || '',
         payload.guests || '',
         payload.dietary || '',
         payload.source || 'website',
