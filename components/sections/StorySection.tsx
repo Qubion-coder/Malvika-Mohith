@@ -14,9 +14,9 @@ const storyItems = [
     content: "We met in 2012, 14 years ago. What began as friendship slowly grew into deep love, trust, and a lifelong bond.",
     image: "/images/3.jpeg",
     icon: Stars,
-    color: "#ffbec6",
-    gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
-    accentBg: "bg-[#ffbec6]",
+    color: "#d8b78c",
+    gradient: "from-[#d8b78c]/10 to-[#d9d1c6]/20",
+    accentBg: "bg-[#d8b78c]",
     tag: "2012",
   },
   {
@@ -27,9 +27,9 @@ const storyItems = [
     content: "Over the years, we supported each other through every season of life. Today, with grateful hearts, we are ready to begin our forever as husband and wife.",
     image: "/images/1.jpeg",
     icon: BookHeart,
-    color: "#b5c57a",
-    gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
-    accentBg: "bg-[#b5c57a]",
+    color: "#9eaa94",
+    gradient: "from-[#9eaa94]/10 to-[#9c9f98]/20",
+    accentBg: "bg-[#9eaa94]",
     tag: "Journey",
   },
   {
@@ -40,9 +40,9 @@ const storyItems = [
     content: "With prayer and joy, we said yes to this new chapter. Your love and blessings make this day even more meaningful.",
     image: "/images/4.jpeg",
     icon: Camera,
-    color: "#ffbec6",
-    gradient: "from-[#ffbec6]/10 to-[#ffdce1]/20",
-    accentBg: "bg-[#ffbec6]",
+    color: "#d8b78c",
+    gradient: "from-[#d8b78c]/10 to-[#d9d1c6]/20",
+    accentBg: "bg-[#d8b78c]",
     tag: "Promise",
   },
   {
@@ -53,9 +53,9 @@ const storyItems = [
     content: "Now we celebrate our wedding day with the people we love. Thank you for being part of our story.",
     image: "/images/2.jpeg",
     icon: PartyPopper,
-    color: "#b5c57a",
-    gradient: "from-[#b5c57a]/10 to-[#d4e0a5]/20",
-    accentBg: "bg-[#b5c57a]",
+    color: "#9eaa94",
+    gradient: "from-[#9eaa94]/10 to-[#9c9f98]/20",
+    accentBg: "bg-[#9eaa94]",
     tag: "Forever",
   },
 ];
@@ -111,9 +111,9 @@ export default function StorySection() {
           className="text-center mb-10 md:mb-12"
         >
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border-2 border-white shadow-md rounded-full px-5 py-2 mb-5">
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#ff8fa3]">Our Love Story</span>
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
+            <Heart className="w-4 h-4 text-primary fill-primary" />
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary">Our Love Story</span>
+            <Heart className="w-4 h-4 text-primary fill-primary" />
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
             Our Love{' '}

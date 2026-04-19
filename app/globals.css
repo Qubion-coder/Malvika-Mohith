@@ -6,35 +6,36 @@
 /* Premium Sri Lankan Kandyan Wedding Theme */
 :root {
   /* Primary Colors - Pink & Green Theme */
-  --theme-pink: #ffbec6;
-  --theme-pink-light: #ffdce1;
-  --theme-green: #b5c57a;
-  --theme-green-light: #d4e0a5;
+  --theme-gold: #d8b78c;
+  --theme-gold-light: #d9d1c6;
+  --theme-sage: #9eaa94;
+  --theme-sage-muted: #9c9f98;
+  --theme-ivory: #e8e8e6;
   --white: #FFFFFF;
-  --text-dark: #2D3436;
-  --text-muted: #636E72;
-  --border-light: #F0F0F0;
+  --text-dark: #3a3b38;
+  --text-muted: #71736e;
+  --border-light: #d9d1c6;
   
   /* Design System Mappings */
-  --background: var(--white);
+  --background: var(--theme-ivory);
   --foreground: var(--text-dark);
-  --card: var(--white);
+  --card: #ffffff;
   --card-foreground: var(--text-dark);
   --popover: var(--white);
   --popover-foreground: var(--text-dark);
-  --primary: var(--theme-pink);
+  --primary: var(--theme-gold);
   --primary-foreground: #ffffff;
-  --secondary: var(--theme-green);
-  --secondary-foreground: var(--text-dark);
-  --muted: var(--text-muted);
-  --muted-foreground: var(--theme-pink-light);
-  --accent: var(--theme-pink-light);
+  --secondary: var(--theme-sage);
+  --secondary-foreground: #ffffff;
+  --muted: var(--theme-sage-muted);
+  --muted-foreground: var(--theme-gold-light);
+  --accent: var(--theme-gold-light);
   --accent-foreground: var(--text-dark);
   --destructive: #EF5350;
   --destructive-foreground: var(--white);
   --border: var(--border-light);
   --input: var(--white);
-  --ring: var(--theme-pink);
+  --ring: var(--theme-gold);
   --radius: 0.75rem;
 }
 
