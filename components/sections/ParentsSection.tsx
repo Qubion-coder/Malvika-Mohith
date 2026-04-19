@@ -83,8 +83,8 @@ function ParentsSectionContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full lg:w-1/3"
           >
-            <div className="relative h-80 md:h-[450px] rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
-              <img src="/images/1.jpeg" alt="Couple" className="w-full h-full object-cover" />
+            <div className="relative aspect-[4/5] md:h-[450px] md:aspect-auto rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
+              <img src="/images/whatsapp_photo_2.jpeg" alt="Couple" className="w-full h-full object-cover object-[center_30%]" />
             </div>
           </motion.div>
           <div className="flex-1 text-center lg:text-left px-4">
@@ -95,9 +95,9 @@ function ParentsSectionContent() {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. KENAT PERERA &amp; MRS. SEPALIKA FERNANDO</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. JANITH PERERA &amp; MRS. BIMBA LIYANAGE</p>
                 <p className="text-secondary font-bold uppercase tracking-[0.2em]">Together with</p>
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. (LATE) NAGAHAGE BERNARD &amp; MRS. MARI LOWE</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. PRASANTHA PERERA &amp; MRS. CHANDRIKA KANNANGARA</p>
               </div>
 
               <div className="py-6">
@@ -106,7 +106,7 @@ function ParentsSectionContent() {
 
               <div className="space-y-4">
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-secondary">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
-                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">THUSHANI &amp; VIMUKTHI</h3>
+                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">NIPUNI &amp; RAVINDU</h3>
               </div>
             </motion.div>
           </div>

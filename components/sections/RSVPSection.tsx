@@ -130,8 +130,8 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by May 23, 2026. <br />
-            <span className="font-bold text-[#bf7752]">3203513816 - Kenat | 3890044224 - Thushani</span>
+            Please respond by July 15, 2026. <br />
+            <span className="font-bold text-[#bf7752]">Ravindu | Nipuni</span>
           </p>
         </motion.div>
 

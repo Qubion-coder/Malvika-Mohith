@@ -336,9 +336,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       className="translate-y-4"
                     >
                       <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.05)] flex items-center justify-center gap-4 sm:gap-6 uppercase">
-                        <span>THUSHANI</span>
+                        <span>NIPUNI</span>
                         <span aria-hidden="true">&amp;</span>
-                        <span>VIMUKTHI</span>
+                        <span>RAVINDU</span>
                       </h3>
                       <div className="mt-4 flex items-center justify-center gap-3">
                         <span className="h-px w-10 bg-secondary/50" />
@@ -358,7 +358,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     }}
                     className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/40 bg-[radial-gradient(circle_at_30%_30%,#ffbec6_0%,#ff99aa_55%,#ff7799_100%)] shadow-[0_10px_30px_rgba(255,190,198,0.45)]"
                   >
-                    <span className="font-serif text-lg text-white">T ✦ V</span>
+                    <span className="font-serif text-lg text-white">N ✦ R</span>
                   </motion.div>
 
                   {/* Hover sheen */}
@@ -396,7 +396,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     {/* Card frame */}
                     <div className="absolute inset-3 rounded-[18px] border border-[#C9A227]/25" />
                     <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-[#C9A227]/50 bg-white/70 text-center text-[10px] leading-8 text-[#8c6a16] font-bold">
-                      TV
+                      NR
                     </div>
 
                     {/* Card ornament */}
@@ -407,11 +407,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </p>
                         <p className="text-[11px] leading-4 text-[#6a4d0d]">
                           Bride, the loving daughter of<br />
-                          <span className="font-semibold">MR. KENAT PERERA</span> and <span className="font-semibold">MRS. SEPALIKA FERNANDO</span>
+                          <span className="font-semibold">MR. JANITH PERERA</span> and <span className="font-semibold">MRS. BIMBA LIYANAGE</span>
                         </p>
                         <p className="text-[11px] leading-4 text-[#6a4d0d]">
                           Groom, the loving son of<br />
-                          <span className="font-semibold">MR. (LATE) NAGAHAGE BERNARD</span> and <span className="font-semibold">MRS. MARI LOWE</span>
+                          <span className="font-semibold">MR. PRASANTHA PERERA</span> and <span className="font-semibold">MRS. CHANDRIKA KANNANGARA</span>
                         </p>
                       </div>
 
@@ -422,11 +422,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       </div>
 
                       <h2 className="mt-5 font-serif text-3xl sm:text-5xl font-light tracking-[0.1em] text-[#6a4d0d] uppercase">
-                        THUSHANI <span className="text-secondary">&amp;</span> VIMUKTHI
+                        NIPUNI <span className="text-secondary">&amp;</span> RAVINDU
                       </h2>
 
                       <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-[#5f5146]">
-                        Invite you to witness a blessed Christian marriage ceremony filled with love, prayer, and grace.
+                        Invite you to witness a blessed wedding ceremony filled with love, prayer, and grace.
                       </p>
 
                       <div className="mt-6 flex items-center justify-center gap-3">
@@ -436,7 +436,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       </div>
 
                       <p className="mt-5 text-sm uppercase tracking-[0.2em] text-[#8c6a16]">
-                        June 06, 2026
+                        July 31, 2026
                       </p>
                     </div>
                   </div>

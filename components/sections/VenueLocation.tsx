@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
 
-const LIVE_LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Chiesa+di+San+Bernardino+alle+Ossa+Piazza+Santo+Stefano+Milano';
-const FUNCTION_LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Piazza+Giuseppe+Resta+9+20009+Vittuone+MI';
+const LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Waters+Edge+Battaramulla+Sri+Lanka';
 
 export default function VenueLocation() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
@@ -50,7 +49,7 @@ export default function VenueLocation() {
           >
             <Sparkles className="h-4 w-4 text-secondary" />
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-secondary sm:text-sm">
-              Church & Reception Venues
+              Wedding Venue
             </span>
           </motion.div>
 
@@ -75,56 +74,29 @@ export default function VenueLocation() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Church Venue */}
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="group relative bg-white/70 backdrop-blur-md rounded-[2.5rem] p-8 md:p-10 shadow-[0_15px_45px_rgba(0,0,0,0.05)] border-2 border-white text-center hover:shadow-xl transition-all duration-500"
+            className="group relative bg-white/70 backdrop-blur-md rounded-[2.5rem] p-8 md:p-12 shadow-[0_15px_45px_rgba(0,0,0,0.05)] border-2 border-white text-center hover:shadow-xl transition-all duration-500"
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center shadow-lg transform rotate-6 group-hover:rotate-12 transition-transform">
-              <MapPin className="h-8 w-8 text-white" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary rounded-3xl flex items-center justify-center shadow-lg transform rotate-6 group-hover:rotate-12 transition-transform">
+              <MapPin className="h-10 w-10 text-white" />
             </div>
 
-            <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-secondary/60 mb-2">The Ceremony</p>
-            <h3 className="font-serif text-3xl text-foreground font-semibold mb-3">CHIESA DI <br />SAN BERNARDINO</h3>
-            <p className="text-xs text-foreground/50 mb-8 uppercase tracking-[0.2em] leading-relaxed max-w-[240px] mx-auto">PIAZZA SANTO STEFANO <br /> 20122 MILANO MI</p>
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.4em] text-primary/60 mb-3">Grand Ballroom</p>
+            <h3 className="font-serif text-4xl md:text-5xl text-foreground font-semibold mb-4 uppercase">WATERS EDGE</h3>
+            <p className="text-sm text-foreground/50 mb-10 uppercase tracking-[0.2em] leading-relaxed max-w-sm mx-auto">316, Ethul Kotte Rd, <br /> Battaramulla, Sri Lanka</p>
 
             <a
-              href={LIVE_LOCATION_URL}
+              href={LOCATION_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-3 bg-secondary text-white px-8 py-5 rounded-2xl text-[11px] font-bold uppercase tracking-[0.25em] shadow-[0_10px_30px_rgba(181,197,122,0.3)] hover:scale-[1.03] active:scale-95 transition-all"
+              className="inline-flex w-full items-center justify-center gap-4 bg-primary text-white px-10 py-6 rounded-2xl text-[12px] font-bold uppercase tracking-[0.3em] shadow-[0_15px_35px_rgba(255,190,198,0.3)] hover:scale-[1.03] active:scale-95 transition-all lg:w-auto lg:px-16"
             >
-              Live Location
-              <Navigation className="h-4 w-4" />
-            </a>
-          </motion.div>
-
-          {/* Reception Venue */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="group relative bg-white/70 backdrop-blur-md rounded-[2.5rem] p-8 md:p-10 shadow-[0_15px_45px_rgba(0,0,0,0.05)] border-2 border-white text-center hover:shadow-xl transition-all duration-500"
-          >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6 group-hover:-rotate-12 transition-transform">
-              <MapPin className="h-8 w-8 text-white" />
-            </div>
-
-            <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/60 mb-2">The Celebration</p>
-            <h3 className="font-serif text-3xl text-foreground font-semibold mb-3">VILLA <br />RESTA MARI</h3>
-            <p className="text-xs text-foreground/50 mb-8 uppercase tracking-[0.2em] leading-relaxed max-w-[240px] mx-auto">PIAZZA GIUSEPPE RESTA, 9, <br /> 20009 VITTUONE MI</p>
-
-            <a
-              href={FUNCTION_LOCATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-3 bg-primary text-white px-8 py-5 rounded-2xl text-[11px] font-bold uppercase tracking-[0.25em] shadow-[0_10px_30px_rgba(255,190,198,0.3)] hover:scale-[1.03] active:scale-95 transition-all"
-            >
-              Live Location
-              <Navigation className="h-4 w-4" />
+              Get Directions
+              <Navigation className="h-5 w-5" />
             </a>
           </motion.div>
         </div>

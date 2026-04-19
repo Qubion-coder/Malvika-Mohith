@@ -16,8 +16,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'THUSHANI & VIMUKTHI Wedding',
-  description: 'Join us as we celebrate the wedding of VIMUKTHI and THUSHANI on June 06, 2026.',
+  title: 'NIPUNI & RAVINDU Wedding',
+  description: 'Join us as we celebrate the wedding of NIPUNI and RAVINDU on July 31, 2026.',
   generator: 'v0.app',
   icons: {
     icon: '/favicon.png',

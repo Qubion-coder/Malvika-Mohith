@@ -23,20 +23,20 @@ export default function FooterSection() {
           </div>
 
           <h2 className="font-serif text-4xl md:text-6xl text-white font-light tracking-tight mb-8">
-            THUSHANI <span className="text-primary italic font-normal">&amp;</span> VIMUKTHI
+            NIPUNI <span className="text-primary italic font-normal">&amp;</span> RAVINDU
           </h2>
 
           <div className="flex flex-col items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-medium text-white/40">
             <div className="flex items-center gap-4 py-4 border-y border-white/10 px-8">
-              <span>Sat</span>
+              <span>Fri</span>
               <div className="h-4 w-px bg-white/20" />
-              <span className="text-white">06 . 06 . 2026</span>
+              <span className="text-white">31 . 07 . 2026</span>
               <div className="h-4 w-px bg-white/20" />
-              <span>June</span>
+              <span>July</span>
             </div>
 
             <div className="mt-12 space-y-6 text-white/80 font-medium">
-              <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} THUSHANI & VIMUKTHI</p>
+              <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} NIPUNI & RAVINDU</p>
 
               <p className="text-[8px] tracking-[0.2em] leading-relaxed">
                 DESIGN AND CREATED BY <span className="text-white">INVITEMINT</span> | CONNECT WHATSAPP: <a href="https://wa.me/94707819074" target="_blank" className="text-white hover:underline">+94 70 781 9074</a>
