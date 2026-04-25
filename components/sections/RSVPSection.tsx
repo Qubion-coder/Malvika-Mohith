@@ -1,17 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Send, Heart, Mail, User, Users, Coffee, Sparkles } from 'lucide-react';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
 
-export default function RSVPSection() {
+export default function RSVPSection({ guestName }: { guestName?: string }) {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
   const [formData, setFormData] = useState({
-    name: '',
+    name: guestName || '',
     attending: 'yes',
   });
+
+  useEffect(() => {
+    if (guestName) {
+      setFormData(prev => ({ ...prev, name: guestName }));
+    }
+  }, [guestName]);
   const [submitted, setSubmitted] = useState(false);
   const [isHoveringSubmit, setIsHoveringSubmit] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

@@ -1,6 +1,11 @@
+function doGet(e) {
+  return ContentService.createTextOutput("Script is running! Send a POST request to submit data.")
+    .setMimeType(ContentService.MimeType.TEXT);
+}
+
 function doPost(e) {
   try {
-    var spreadsheetId = '167B6V4amw3qs2tZEwN5LwtNxb2gJTFM27lpE7zjKrdA';
+    var spreadsheetId = '1hp6lgHPgU00F8gF_3YP-vVAG6aiPuy11bouFzeNldhM';
     var ss = SpreadsheetApp.openById(spreadsheetId);
 
     var body = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -16,16 +21,13 @@ function doPost(e) {
       }
 
       if (rsvpSheet.getLastRow() === 0) {
-        rsvpSheet.appendRow(['submittedAt', 'name', 'attending', 'guests', 'dietary', 'source']);
+        rsvpSheet.appendRow(['submittedAt', 'name', 'attending']);
       }
 
       rsvpSheet.appendRow([
         submittedAt,
         payload.name || '',
         payload.attending || '',
-        payload.guests || '',
-        payload.dietary || '',
-        payload.source || 'website',
       ]);
     } else if (formType === 'wish') {
       var wishSheet = ss.getSheetByName('wish');
@@ -34,14 +36,13 @@ function doPost(e) {
       }
 
       if (wishSheet.getLastRow() === 0) {
-        wishSheet.appendRow(['submittedAt', 'name', 'message', 'source']);
+        wishSheet.appendRow(['submittedAt', 'name', 'message']);
       }
 
       wishSheet.appendRow([
         submittedAt,
         payload.name || '',
         payload.message || '',
-        payload.source || 'website',
       ]);
     } else {
       throw new Error('Invalid formType. Expected rsvp or wish.');

@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface EnvelopeOpenerProps {
   onEnvelopeOpen: () => void;
+  guestName?: string;
 }
 
-export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
+export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -434,6 +435,15 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         <span className="text-[#d8b78c]">✦</span>
                         <span className="h-px w-10 bg-[#d8b78c]/45" />
                       </div>
+
+                      {guestName && (
+                        <div className="mt-4 mb-2">
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#8c6a16]/60 mb-1">Specially Invited</p>
+                          <p className="font-serif text-lg text-[#6a4d0d] border-b border-[#d8b78c]/30 pb-1 inline-block min-w-[120px]">
+                            {guestName}
+                          </p>
+                        </div>
+                      )}
 
                       <p className="mt-5 text-sm uppercase tracking-[0.2em] text-[#8c6a16]">
                         July 31, 2026

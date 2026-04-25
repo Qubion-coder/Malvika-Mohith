@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { EnvelopeOpener } from '@/components/envelope-opener';
 import HeroSection from '@/components/sections/HeroSection';
+import PersonalizedWelcome from '@/components/sections/PersonalizedWelcome';
 import ParentsSection from '@/components/sections/ParentsSection';
 
 import CeremonyDetails from '@/components/sections/CeremonyDetails';
@@ -14,8 +16,13 @@ import BlessingsSection from '@/components/sections/BlessingsSection';
 import FooterSection from '@/components/sections/FooterSection';
 import MusicPlayer from '@/components/MusicPlayer';
 
-export default function Home() {
+function HomeContent() {
   const [isOpened, setIsOpened] = useState(false);
+  const searchParams = useSearchParams();
+
+  const guestName = searchParams.get('to');
+  const guestTitle = searchParams.get('t');
+  const personalizedName = guestName ? `${guestTitle ? guestTitle + ' ' : ''}${guestName}` : '';
 
   useEffect(() => {
     const html = document.documentElement;
@@ -28,21 +35,33 @@ export default function Home() {
       <MusicPlayer />
 
       {!isOpened ? (
-        <EnvelopeOpener onEnvelopeOpen={() => setIsOpened(true)} />
+        <EnvelopeOpener
+          onEnvelopeOpen={() => setIsOpened(true)}
+          guestName={personalizedName}
+        />
       ) : (
         <>
           <HeroSection />
+          <PersonalizedWelcome guestName={personalizedName} />
           <ParentsSection />
 
           <CeremonyDetails />
           <CountdownSection />
 
           <VenueLocation />
-          <RSVPSection />
+          <RSVPSection guestName={personalizedName} />
           <BlessingsSection />
           <FooterSection />
         </>
       )}
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center text-primary font-serif italic text-xl">Loading Invitation...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
