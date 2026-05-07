@@ -23,11 +23,11 @@ export default function CeremonyDetails() {
       venueSub: '316, ETHUL KOTTE RD, BATTARAMULLA',
     },
     {
-      key: 'function',
-      title: 'Wedding Celebration',
-      timeLabel: 'Celebration Time',
-      timeValue: 'To be announced',
-      timeSub: 'Followed by the Reception',
+      key: 'reception',
+      title: 'Wedding Reception',
+      timeLabel: 'Reception Time',
+      timeValue: '8:00 AM - 4:00 PM',
+      timeSub: 'Grand Celebration & Dining',
       venueLabel: 'Venue',
       venueValue: 'GRAND BALLROOM, WATERS EDGE',
       venueSub: '316, ETHUL KOTTE RD, BATTARAMULLA',
@@ -140,10 +140,6 @@ export default function CeremonyDetails() {
                   <p className="text-foreground/80 text-sm md:text-base font-medium flex items-center gap-3">
                     <span className="h-1.5 w-1.5 rounded-full bg-secondary"></span>
                     <span><span className="text-secondary font-bold uppercase tracking-wider text-[11px] mr-2">Dress Code:</span> Elegant / Formal Attire</span>
-                  </p>
-                  <p className="text-foreground/80 text-sm md:text-base font-medium flex items-center gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-secondary"></span>
-                    <span><span className="text-secondary font-bold uppercase tracking-wider text-[11px] mr-2">Reception:</span> Followed by celebration at GRAND BALLROOM, WATERS EDGE</span>
                   </p>
                 </div>
               </motion.div>
