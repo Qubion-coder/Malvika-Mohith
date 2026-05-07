@@ -13,6 +13,16 @@ export default function CeremonyDetails() {
 
   const detailGroups = [
     {
+      key: 'poruwa',
+      title: 'Poruwa Ceremony',
+      timeLabel: 'Ceremony Time',
+      timeValue: '8:30 AM',
+      timeSub: 'Traditional Sri Lankan Ceremony',
+      venueLabel: 'Venue',
+      venueValue: 'GRAND BALLROOM, WATERS EDGE',
+      venueSub: '316, ETHUL KOTTE RD, BATTARAMULLA',
+    },
+    {
       key: 'function',
       title: 'Wedding Celebration',
       timeLabel: 'Celebration Time',
@@ -115,8 +125,12 @@ export default function CeremonyDetails() {
                 transition={{ duration: 1, delay: 0.6 }}
                 className="mt-6 overflow-hidden rounded-[2.5rem] border border-secondary/10 bg-secondary/5 p-8 shadow-sm backdrop-blur-lg relative"
               >
-                <div className="absolute right-0 top-0 opacity-10">
-                  <Crown className="w-32 h-32 -mt-8 -mr-8 text-secondary" />
+                <div className="absolute right-0 top-0 opacity-15">
+                  <img
+                    src="/Screenshot 2026-05-08 031308.png"
+                    alt="Monogram"
+                    className="w-32 h-32 -mt-8 -mr-8 object-contain"
+                  />
                 </div>
 
                 <h4 className="text-xs uppercase tracking-widest text-secondary mb-4 font-bold flex items-center gap-2">

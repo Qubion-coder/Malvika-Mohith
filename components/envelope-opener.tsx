@@ -22,7 +22,7 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
     setTimeout(() => {
       setShowContent(true);
       onEnvelopeOpen();
-    }, 2600);
+    }, 1000);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({
@@ -54,8 +54,8 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
           }}
           className="fixed inset-0 z-50 overflow-hidden"
         >
-          {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(158,170,148,0.12),transparent_35%),linear-gradient(135deg,#3a3b38_0%,#4a544a_38%,#555d55_65%,#3a3b38_100%)]" />
+          {/* Lighter Background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(216,183,140,0.15),transparent_40%),linear-gradient(135deg,#faf9f6_0%,#f5f3ef_38%,#fdfcfb_65%,#faf9f6_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -104,21 +104,9 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
             />
           </div>
 
-          {/* Top and bottom ornamental fade */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/25 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/30 to-transparent" />
 
-          {/* Gold ceremonial rings */}
-          <motion.div
-            className="absolute -top-24 -right-24 h-72 w-72 rounded-full border border-secondary/15"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
-          />
-          <motion.div
-            className="absolute -bottom-28 -left-28 h-96 w-96 rounded-full border border-secondary/10"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 34, repeat: Infinity, ease: 'linear' }}
-          />
+
+
 
           {/* Floating sparkles */}
           <div className="absolute inset-0 pointer-events-none">
@@ -188,18 +176,18 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.15 }}
-              className="mb-8 text-center"
+              className="mb-12 text-center"
             >
-              <div className="mb-3 flex items-center justify-center gap-4">
+              <div className="mb-4 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#d8b78c]/70" />
-                <p className="hidden md:block text-[10px] uppercase tracking-[0.45em] text-[#f5e6c8]/80">
-                  A Wedding Invitation
+                <p className="text-[9px] md:text-[11px] uppercase tracking-[0.5em] text-[#8c6a16]">
+                  The Wedding Invitation
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#d8b78c]/70" />
               </div>
-              <p className="hidden md:block text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
-                Unveil the moment
-              </p>
+              <h1 className="font-script text-2xl md:text-6xl tracking-[0.05em] text-[#8c6a16] capitalize">
+                Nipuni <span className="text-secondary/80">&amp;</span> Ravindu
+              </h1>
             </motion.div>
 
             {/* Envelope stage */}
@@ -229,9 +217,7 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
                 }}
               />
 
-              {/* Decorative frame */}
-              <div className="absolute -inset-6 rounded-[2rem] border border-[#d8b78c]/15" />
-              <div className="absolute -inset-3 rounded-[1.6rem] border border-[#f5e6c8]/10" />
+
 
               <motion.button
                 type="button"
@@ -240,217 +226,21 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
                 whileTap={!isOpen ? { scale: 0.995 } : {}}
                 className="group relative block cursor-pointer isolate"
               >
-                <div className="pointer-events-none absolute -inset-3 rounded-[2rem] border border-[#f4dc9c]/40 opacity-60" />
 
-                {/* Envelope body */}
+
+                {/* Envelope Image */}
                 <motion.div
-                  animate={isOpen ? { y: 56, opacity: 0 } : { y: 0, opacity: 1 }}
-                  transition={{ duration: 0.9, ease: 'easeOut' }}
-                  className="relative h-[260px] w-[420px] overflow-hidden rounded-[28px] border border-secondary/25 bg-[linear-gradient(180deg,rgba(255,255,255,0.95)_0%,rgba(255,250,250,0.98)_100%)] shadow-[0_30px_80px_rgba(0,0,0,0.25)]"
+                  animate={isOpen ? { y: 100, opacity: 0, scale: 0.9 } : { y: 0, opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, ease: 'easeOut' }}
+                  className="relative z-10"
                 >
-                  {/* Inner texture */}
-                  <div className="absolute inset-0 opacity-[0.08]">
-                    <div
-                      className="h-full w-full"
-                      style={{
-                        backgroundImage: `
-                          radial-gradient(circle at center, rgba(201,162,39,0.25) 1px, transparent 1px)
-                        `,
-                        backgroundSize: '24px 24px',
-                      }}
-                    />
-                  </div>
-
-                  {/* Premium foil layers for closed-envelope look */}
-                  <div className="pointer-events-none absolute inset-[8px] rounded-[22px] border border-[#f2d89c]/40" />
-                  <div className="pointer-events-none absolute inset-[14px] rounded-[18px] border border-[#c9a227]/20" />
-                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(128deg,rgba(255,255,255,0.26)_0%,transparent_36%,transparent_64%,rgba(255,255,255,0.2)_100%)]" />
-
-                  {!isOpen && (
-                    <>
-                      <div className="pointer-events-none absolute left-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute bottom-5 left-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                      <div className="pointer-events-none absolute bottom-5 right-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                    </>
-                  )}
-
-                  {/* Top flap */}
-                  <motion.div
-                    initial={{ rotateX: 0 }}
-                    animate={isOpen ? { rotateX: -180 } : { rotateX: 0 }}
-                    transition={{
-                      duration: 1.25,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="absolute left-0 top-0 h-[54%] w-full origin-top"
-                    style={{
-                      transformStyle: 'preserve-3d',
-                      perspective: '1600px',
-                      clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
-                    }}
-                  >
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,#a57b16_0%,#c9a227_38%,#e0c46d_100%)] shadow-[0_18px_40px_rgba(0,0,0,0.22)]" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.22),transparent_45%)]" />
-
-                    {/* Flap ornament */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="rounded-full border border-white/20 p-4">
-                        <svg
-                          className="h-10 w-10 text-white/90"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.3"
-                        >
-                          <path d="M12 3c1.8 2.5 3.8 4.3 6.5 5.3-1.6 2.3-3.8 3.7-6.5 4.7-2.7-1-4.9-2.4-6.5-4.7C8.2 7.3 10.2 5.5 12 3Z" />
-                          <path d="M12 11.8c1.2 1.8 2.5 3.1 4.5 3.8-1.1 1.5-2.5 2.5-4.5 3.2-2-.7-3.4-1.7-4.5-3.2 2-.7 3.3-2 4.5-3.8Z" />
-                        </svg>
-                      </div>
-                    </div>
-
-                    {!isOpen && (
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
-                        className="pointer-events-none absolute inset-0 m-auto h-20 w-20 rounded-full border border-white/25"
-                      />
-                    )}
-                  </motion.div>
-
-                  {/* Side folds */}
-                  <div
-                    className="absolute bottom-0 left-0 h-[62%] w-1/2 bg-[linear-gradient(135deg,rgba(201,162,39,0.12),rgba(255,255,255,0.55))]"
-                    style={{ clipPath: 'polygon(0 0, 100% 100%, 0 100%)' }}
-                  />
-                  <div
-                    className="absolute bottom-0 right-0 h-[62%] w-1/2 bg-[linear-gradient(225deg,rgba(201,162,39,0.12),rgba(255,255,255,0.55))]"
-                    style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
-                  />
-
-                  {/* Bottom section */}
-                  <div className="absolute inset-x-0 bottom-0 flex h-[58%] flex-col items-center justify-end px-8 pb-4 sm:pb-6 text-center">
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={!isOpen ? { opacity: 1 } : { opacity: 0 }}
-                      transition={{ duration: 0.35 }}
-                      className="translate-y-4"
-                    >
-                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.05)] flex items-center justify-center gap-4 sm:gap-6 uppercase">
-                        <span>NIPUNI</span>
-                        <span aria-hidden="true">&amp;</span>
-                        <span>RAVINDU</span>
-                      </h3>
-                      <div className="mt-4 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-secondary/50" />
-                        <span className="text-secondary">✦</span>
-                        <span className="h-px w-10 bg-secondary/50" />
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Wax seal */}
-                  <motion.div
-                    animate={!isOpen ? { scale: [1, 1.05, 1] } : { scale: 0.9, opacity: 0 }}
-                    transition={{
-                      duration: 2.8,
-                      repeat: !isOpen ? Infinity : 0,
-                      ease: 'easeInOut',
-                    }}
-                    className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/40 bg-[radial-gradient(circle_at_30%_30%,#d8b78c_0%,#c9a227_55%,#a57b16_100%)] shadow-[0_10px_30px_rgba(216,183,140,0.45)]"
-                  >
-                    <span className="font-serif text-lg text-white">N ✦ R</span>
-                  </motion.div>
-
-                  {/* Hover sheen */}
-                  <motion.div
-                    className="absolute inset-y-0 left-[-30%] w-[30%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent"
-                    animate={!isOpen ? { left: ['-35%', '125%'] } : {}}
-                    transition={{
-                      duration: 2.8,
-                      repeat: Infinity,
-                      repeatDelay: 1.8,
-                      ease: 'easeInOut',
-                    }}
+                  <img
+                    src="/ChatGPT_Image_May_8__2026__03_11_04_AM-removebg-preview.png"
+                    alt="Wedding Envelope"
+                    className="w-[450px] h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                   />
                 </motion.div>
 
-                {/* Invitation card */}
-                <motion.div
-                  initial={{ y: 110, opacity: 0, scale: 0.96 }}
-                  animate={
-                    isOpen
-                      ? { y: -8, opacity: 1, scale: 1 }
-                      : { y: 110, opacity: 0, scale: 0.96 }
-                  }
-                  transition={{
-                    duration: 1.1,
-                    delay: 0.72,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="pointer-events-none absolute left-1/2 top-[56px] w-[360px] -translate-x-1/2"
-                >
-                  <div className="relative overflow-hidden rounded-[24px] border border-[#d8b78c]/35 bg-[linear-gradient(180deg,rgba(248,236,214,0.98)_0%,rgba(255,252,247,0.99)_100%)] px-8 py-10 shadow-[0_25px_60px_rgba(0,0,0,0.28)]">
-                    {/* Card glow */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.18),transparent_44%)]" />
-
-                    {/* Card frame */}
-                    <div className="absolute inset-3 rounded-[18px] border border-[#d8b78c]/25" />
-                    <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-[#d8b78c]/50 bg-white/70 text-center text-[10px] leading-8 text-[#8c6a16] font-bold">
-                      NR
-                    </div>
-
-                    {/* Card ornament */}
-                    <div className="relative text-center">
-                      <div className="space-y-2 mb-3">
-                        <p className="text-[11px] uppercase tracking-[0.1em] text-[#8c6a16]">
-                          Together with their families
-                        </p>
-                        <p className="text-[11px] leading-4 text-[#6a4d0d]">
-                          Bride, the loving daughter of<br />
-                          <span className="font-semibold">MR. JANITH PERERA</span> and <span className="font-semibold">MRS. BIMBA LIYANAGE</span>
-                        </p>
-                        <p className="text-[11px] leading-4 text-[#6a4d0d]">
-                          Groom, the loving son of<br />
-                          <span className="font-semibold">MR. PRASANTHA PERERA</span> and <span className="font-semibold">MRS. CHANDRIKA KANNANGARA</span>
-                        </p>
-                      </div>
-
-                      <div className="mt-4 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#d8b78c]/45" />
-                        <span className="text-[#d8b78c]">❋</span>
-                        <span className="h-px w-10 bg-[#d8b78c]/45" />
-                      </div>
-
-                      <h2 className="mt-5 font-serif text-3xl sm:text-5xl font-light tracking-[0.1em] text-[#6a4d0d] uppercase">
-                        NIPUNI <span className="text-secondary">&amp;</span> RAVINDU
-                      </h2>
-
-                      <p className="mx-auto mt-5 max-w-[240px] text-sm leading-7 text-[#5f5146]">
-                        Invite you to witness a blessed wedding ceremony filled with love, prayer, and grace.
-                      </p>
-
-                      <div className="mt-6 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#d8b78c]/45" />
-                        <span className="text-[#d8b78c]">✦</span>
-                        <span className="h-px w-10 bg-[#d8b78c]/45" />
-                      </div>
-
-                      {guestName && (
-                        <div className="mt-4 mb-2">
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#8c6a16]/60 mb-1">Specially Invited</p>
-                          <p className="font-serif text-lg text-[#6a4d0d] border-b border-[#d8b78c]/30 pb-1 inline-block min-w-[120px]">
-                            {guestName}
-                          </p>
-                        </div>
-                      )}
-
-                      <p className="mt-5 text-sm uppercase tracking-[0.2em] text-[#8c6a16]">
-                        July 31, 2026
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
               </motion.button>
 
               {/* Instruction moved outside the envelope for better readability on mobile */}
@@ -458,7 +248,7 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
                 transition={{ duration: 0.4 }}
-                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#f5e6c8]/80"
+                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#8c6a16]/80"
               >
                 Touch to Unveil
               </motion.p>

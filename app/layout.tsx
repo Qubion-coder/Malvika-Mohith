@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, Inter, Pinyon_Script } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import './enhancements.css'
@@ -15,13 +15,19 @@ const inter = Inter({
   variable: '--font-sans'
 })
 
+const pinyonScript = Pinyon_Script({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: '--font-script'
+})
+
 export const metadata: Metadata = {
   title: 'NIPUNI & RAVINDU Wedding',
   description: 'Join us as we celebrate the wedding of NIPUNI and RAVINDU on July 31, 2026.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/Screenshot 2026-05-08 031308.png',
+    apple: '/Screenshot 2026-05-08 031308.png',
   },
 }
 
@@ -38,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfairDisplay.variable} ${inter.variable} ${pinyonScript.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

@@ -98,8 +98,12 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
             transition={{ type: "spring", bounce: 0.6 }}
             className="relative mx-auto mb-8 w-32 h-32 md:w-44 md:h-44 rounded-full border-8 border-white bg-white shadow-[0_20px_42px_rgba(189,126,86,0.3)] p-[2px] z-10 block"
           >
-            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[radial-gradient(circle,rgba(244,206,169,0.75),rgba(255,255,255,0.95))]">
-              <Mail className="h-12 w-12 text-[#bd6f4e]" />
+            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-white overflow-hidden">
+              <img
+                src="/Screenshot 2026-05-08 031308.png"
+                alt="Monogram"
+                className="w-full h-full object-contain p-2"
+              />
             </div>
 
             {/* Tiny floating decorative elements around the image */}

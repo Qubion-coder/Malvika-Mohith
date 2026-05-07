@@ -14,6 +14,7 @@ import VenueLocation from '@/components/sections/VenueLocation';
 import RSVPSection from '@/components/sections/RSVPSection';
 import BlessingsSection from '@/components/sections/BlessingsSection';
 import FooterSection from '@/components/sections/FooterSection';
+import CreativeImageSection from '@/components/sections/CreativeImageSection';
 import MusicPlayer from '@/components/MusicPlayer';
 
 function HomeContent() {
@@ -46,10 +47,13 @@ function HomeContent() {
           <ParentsSection />
 
           <CeremonyDetails />
+          <CreativeImageSection imageSrc="/1.jpeg" overlayText="A Sacred Bond" />
           <CountdownSection />
+          <CreativeImageSection imageSrc="/2.jpeg" overlayText="Forever Starts Soon" />
 
           <VenueLocation />
           <RSVPSection guestName={personalizedName} />
+          <CreativeImageSection imageSrc="/3.jpeg" overlayText="Celebrate With Us" />
           <BlessingsSection />
           <FooterSection />
         </>
