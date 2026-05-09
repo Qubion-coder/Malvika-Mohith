@@ -53,7 +53,7 @@ function HomeContent() {
 
           <VenueLocation />
           <RSVPSection guestName={personalizedName} />
-          <SimpleImageSection imageSrc="/3.jpeg" />
+          <SimpleImageSection imageSrc="/3.jpeg" objectPosition="object-bottom" useFullImage />
           <BlessingsSection />
           <FooterSection />
         </>
