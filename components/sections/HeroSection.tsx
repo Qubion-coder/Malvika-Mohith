@@ -34,7 +34,7 @@ export default function HeroSection() {
         >
           <div className="h-px w-8 bg-primary/50" />
           <span className="text-xs font-bold uppercase tracking-[0.5em] text-primary">
-            Holy Matrimony
+            Wedding Ceremony
           </span>
           <div className="h-px w-8 bg-primary/50" />
         </motion.div>
