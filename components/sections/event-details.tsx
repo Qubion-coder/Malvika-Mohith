@@ -274,7 +274,7 @@ export function EventDetails() {
               </p>
 
               <p className="mx-auto mt-4 max-w-3xl text-lg font-light leading-8 text-[#4f3d34]">
-                Join us for a day of celebration as we unite two families and countless hearts in the sacred bond of matrimony. Your presence will make our celebration even more special.
+                Join us for a day of celebration as we unite two families and countless hearts in our wedding ceremony. Your presence will make our celebration even more special.
               </p>
             </div>
           </div>
