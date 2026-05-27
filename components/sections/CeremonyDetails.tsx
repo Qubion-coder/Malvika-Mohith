@@ -26,7 +26,7 @@ export default function CeremonyDetails() {
       key: 'reception',
       title: 'Wedding Reception',
       timeLabel: 'Reception Time',
-      timeValue: '8:30 AM - 4:00 PM',
+      timeValue: '10:00 AM - 4:00 PM',
       timeSub: 'Grand Celebration & Dining',
       venueLabel: 'Venue',
       venueValue: 'GRAND BALLROOM, WATERS EDGE',
