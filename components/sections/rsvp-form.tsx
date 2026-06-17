@@ -73,7 +73,7 @@ export function RSVPForm() {
         >
           <h2 className="text-5xl font-serif font-light text-gold mb-4">RSVP</h2>
           <p className="text-dark-text font-light text-lg">
-            Please confirm your attendance by May 23, 2026
+            Please confirm your attendance by 10.07.2026
           </p>
           <div className="w-16 h-1 bg-gold/30 mx-auto mt-4" />
         </motion.div>

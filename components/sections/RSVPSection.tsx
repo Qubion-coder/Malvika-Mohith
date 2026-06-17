@@ -140,7 +140,7 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by June 15, 2026. <br />
+            Please respond by 10.07.2026. <br />
             <span className="font-bold text-[#bf7752]">Ravindu | Nipuni</span>
           </p>
         </motion.div>

@@ -264,7 +264,7 @@ export default function EventDetails() {
                 Kindly Respond
               </p>
               <p className="mt-3 text-lg font-light text-[#4f3d34]">
-                RSVP by May 20, 2026
+                RSVP by 10.07.2026
               </p>
             </div>
           </div>
