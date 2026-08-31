@@ -54,8 +54,11 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
           }}
           className="fixed inset-0 z-50 overflow-hidden"
         >
-          {/* Lighter Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(216,183,140,0.15),transparent_40%),linear-gradient(135deg,#faf9f6_0%,#f5f3ef_38%,#fdfcfb_65%,#faf9f6_100%)]" />
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url("/ChatGPT Image Aug 31, 2026, 10_38_18 PM.png")' }}
+          />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -186,7 +189,7 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#d8b78c]/70" />
               </div>
               <h1 className="font-script text-2xl md:text-6xl tracking-[0.05em] text-[#8c6a16] capitalize">
-                Nipuni <span className="text-secondary/80">&amp;</span> Ravindu
+                Malvika <span className="text-secondary/80">&amp;</span> Mohith
               </h1>
             </motion.div>
 

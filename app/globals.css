@@ -5,16 +5,16 @@
 
 /* Premium Sri Lankan Kandyan Wedding Theme */
 :root {
-  /* Primary Colors - Pink & Green Theme */
-  --theme-gold: #d8b78c;
-  --theme-gold-light: #d9d1c6;
-  --theme-sage: #9eaa94;
-  --theme-sage-muted: #9c9f98;
-  --theme-ivory: #e8e8e6;
+  /* Tropical Island & Red Theme */
+  --theme-gold: #c41e3a; /* Red primary */
+  --theme-gold-light: #d4af37; /* Gold accent */
+  --theme-sage: #2e8b57; /* Tropical Green */
+  --theme-sage-muted: #0077be; /* Tropical Blue */
+  --theme-ivory: #f5f5dc; /* Beige background */
   --white: #FFFFFF;
-  --text-dark: #3a3b38;
-  --text-muted: #71736e;
-  --border-light: #d9d1c6;
+  --text-dark: #2a2a2a;
+  --text-muted: #5a5a5a;
+  --border-light: #e0d8c0;
   
   /* Design System Mappings */
   --background: var(--theme-ivory);

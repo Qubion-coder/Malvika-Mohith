@@ -95,9 +95,9 @@ function ParentsSectionContent() {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. JANITH PERERA &amp; MRS. BIMBA LIYANAGE</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">AARTI UTTAMANI &amp; DEEPAK UTTAMANI</p>
                 <p className="text-secondary font-bold uppercase tracking-[0.2em]">Together with</p>
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MR. PRASANTHA PERERA &amp; MRS. CHANDRIKA KANNANGARA</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">RITU THAWANI &amp; LATE KISHOR THAWANI</p>
               </div>
 
               <div className="py-6">
@@ -106,7 +106,7 @@ function ParentsSectionContent() {
 
               <div className="space-y-4">
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-secondary">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
-                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">NIPUNI &amp; RAVINDU</h3>
+                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">MALVIKA &amp; MOHITH</h3>
               </div>
             </motion.div>
           </div>

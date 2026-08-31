@@ -45,8 +45,8 @@ export default function HeroSection() {
           transition={{ duration: 1.2, delay: 0.1 }}
           className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[1.1] bg-gradient-to-b from-[#f3e3c0] via-[#C9A227] to-[#8d6e1d] bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
         >
-          NIPUNI <span className="text-white italic opacity-80">&amp;</span> <br className="sm:hidden" />
-          RAVINDU
+          MALVIKA <span className="text-white italic opacity-80">&amp;</span> <br className="sm:hidden" />
+          MOHITH
         </motion.h1>
 
         <motion.p
@@ -67,7 +67,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center">
              <p className="text-[10px] uppercase tracking-[0.6em] text-primary font-bold mb-4 opacity-70 group-hover:opacity-100 transition-opacity">Save the Date</p>
              <h2 className="font-serif text-3xl text-white sm:text-5xl tracking-wide">
-               FRIDAY <span className="text-primary mx-2">31</span> JULY 2026
+               11 <span className="text-primary italic mx-2">&amp;</span> 12 DEC 2026
              </h2>
              <div className="mt-6 flex items-center gap-6 text-white/40">
                 <div className="h-px w-12 bg-white/20" />

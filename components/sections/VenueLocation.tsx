@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
 
-const LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Waters+Edge+Battaramulla+Sri+Lanka';
+const LOCATION_URL = 'https://www.google.com/maps/search/?api=1&query=Citrus+Waskaduwa+Sri+Lanka';
 
 export default function VenueLocation() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
@@ -85,9 +85,9 @@ export default function VenueLocation() {
               <MapPin className="h-10 w-10 text-white" />
             </div>
 
-            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.4em] text-primary/60 mb-3">Grand Ballroom</p>
-            <h3 className="font-serif text-4xl md:text-5xl text-foreground font-semibold mb-4 uppercase">WATERS EDGE</h3>
-            <p className="text-sm text-foreground/50 mb-10 uppercase tracking-[0.2em] leading-relaxed max-w-sm mx-auto">316, Ethul Kotte Rd, <br /> Battaramulla, Sri Lanka</p>
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.4em] text-primary/60 mb-3">Main Venue</p>
+            <h3 className="font-serif text-4xl md:text-5xl text-foreground font-semibold mb-4 uppercase">CITRUS WASKADUWA</h3>
+            <p className="text-sm text-foreground/50 mb-10 uppercase tracking-[0.2em] leading-relaxed max-w-sm mx-auto">Waskaduwa, <br /> Sri Lanka</p>
 
             <a
               href={LOCATION_URL}
