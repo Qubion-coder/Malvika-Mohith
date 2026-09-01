@@ -59,8 +59,12 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-white px-4 sm:px-6 lg:px-8 py-24 md:py-32"
+      className="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-24 md:py-32 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/tropical_pearls_bg.jpg')" }}
     >
+      {/* Subtle Overlay to ensure form stands out without hiding the pearls */}
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px] pointer-events-none z-0"></div>
+
       {/* Premium Ambient Backdrop */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
@@ -156,13 +160,7 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
           <div className="absolute -top-10 left-1/2 h-32 w-[90%] -translate-x-1/2 rounded-[2rem] bg-white/30 blur-md pointer-events-none" />
 
           <div className="relative overflow-hidden rounded-[3rem] border border-secondary/25 bg-white p-6 md:p-12 shadow-[0_20px_55px_rgba(181,197,122,0.15)] backdrop-blur-2xl">
-            {/* Corner Decor */}
-            <div className="absolute top-0 right-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none z-0 opacity-95">
-              <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
-            </div>
-            <div className="absolute bottom-0 left-0 w-24 h-[250px] md:w-56 md:h-[450px] pointer-events-none z-0 opacity-95">
-              <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
-            </div>
+
 
 
             {/* Cute internal accents */}

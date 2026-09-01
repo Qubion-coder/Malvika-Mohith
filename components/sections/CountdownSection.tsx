@@ -65,8 +65,13 @@ export default function CountdownSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8 md:py-32"
+      className="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8 md:py-32"
     >
+      {/* Full Section Background Image */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <img src="/ChatGPT%20Image%20Sep%201,%202026,%2004_57_37%20PM.png" alt="Background" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-white/10"></div>
+      </div>
       {/* Premium Atmosphere */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
@@ -225,22 +230,6 @@ export default function CountdownSection() {
           </div>
         </div>
 
-        <motion.div
-          className="mt-14 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          <div className="flex items-center gap-3 text-[#bd6f56]">
-            <Stars size={14} className="animate-pulse" />
-            <Heart size={15} className="animate-bounce" fill="currentColor" />
-            <span className="font-serif italic text-lg text-[#7c625a] sm:text-xl">
-              Can't wait to see you there!
-            </span>
-            <Heart size={15} className="animate-bounce" fill="currentColor" style={{ animationDelay: '200ms' }} />
-            <Stars size={14} className="animate-pulse" />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

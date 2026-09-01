@@ -18,7 +18,6 @@ export default function MusicPlayer() {
         audio.volume = 0.4;
         audioRef.current = audio;
 
-        // Attempt autoplay
         const playAudio = () => {
             audio.play()
                 .then(() => {
@@ -26,33 +25,15 @@ export default function MusicPlayer() {
                     setShowHint(false);
                 })
                 .catch(() => {
+                    // If blocked, fallback to asking for tap
                     setShowHint(true);
-                    // Add interaction listeners if autoplay is blocked
-                    const startOnInteraction = () => {
-                        audio.play()
-                            .then(() => {
-                                setIsPlaying(true);
-                                setShowHint(false);
-                            })
-                            .catch(() => { });
-                        removeListeners();
-                    };
-
-                    const removeListeners = () => {
-                        ['click', 'touchstart', 'scroll'].forEach((evt) =>
-                            document.removeEventListener(evt, startOnInteraction)
-                        );
-                    };
-
-                    ['click', 'touchstart', 'scroll'].forEach((evt) =>
-                        document.addEventListener(evt, startOnInteraction, { once: true, passive: true })
-                    );
                 });
         };
 
-        playAudio();
+        window.addEventListener('start-wedding-music', playAudio);
 
         return () => {
+            window.removeEventListener('start-wedding-music', playAudio);
             audio.pause();
             audio.src = '';
         };

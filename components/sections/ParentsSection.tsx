@@ -19,22 +19,9 @@ function ParentsSectionContent() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-white py-20 px-4 sm:px-6 lg:px-8"
+      className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center"
+      style={{ backgroundImage: "url('/ChatGPT%20Image%20Sep%201,%202026,%2004_46_12%20PM.png')" }}
     >
-      {/* Background Decor */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-secondary/10 to-transparent hidden md:block" />
-        <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl opacity-50" />
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/5 rounded-full blur-3xl opacity-50" />
-      </div>
-
-      {/* Corner Decor */}
-      <div className="absolute top-0 right-0 w-40 h-40 md:w-72 md:h-72 pointer-events-none z-0 opacity-95">
-        <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
-      </div>
-      <div className="absolute bottom-0 left-0 w-32 h-[400px] md:w-64 md:h-[600px] pointer-events-none z-0 opacity-95">
-        <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
-      </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
 
@@ -105,7 +92,7 @@ function ParentsSectionContent() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-secondary">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-black">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
                 <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">MALVIKA &amp; MOHITH</h3>
               </div>
             </motion.div>

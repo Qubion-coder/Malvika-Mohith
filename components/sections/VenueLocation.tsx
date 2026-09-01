@@ -14,8 +14,14 @@ export default function VenueLocation() {
       ref={ref}
       className="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8 md:py-32"
     >
+      {/* Watermark Background */}
+      <div 
+        className="pointer-events-none absolute inset-0 opacity-[0.15] bg-center bg-cover bg-no-repeat z-0 mix-blend-multiply"
+        style={{ backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0jFCyduE8rckBG6NwG6gykbaI_bhxVxlmzpYKl2SqZXLERt1d0p0KqCk&s=10')` }}
+      />
+
       {/* Atmosphere */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
         <motion.div
           animate={{ x: [0, 55, 0], y: [0, 35, 0], scale: [1, 1.12, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}

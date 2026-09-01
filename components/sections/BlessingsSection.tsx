@@ -77,15 +77,12 @@ export default function BlessingsSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff5f6_45%,#ffeff1_100%)] px-4 py-24 sm:px-6 lg:px-8 md:py-32"
+      className="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8 md:py-32 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/blessings_tropical_bg.jpg')" }}
     >
-      {/* Corner Decor */}
-      <div className="absolute top-0 right-0 w-40 h-40 md:w-72 md:h-72 pointer-events-none z-0 opacity-95">
-        <img src="/images/44.png" alt="" className="w-full h-full object-contain object-top-right" />
-      </div>
-      <div className="absolute bottom-0 left-0 w-32 h-[400px] md:w-64 md:h-[600px] pointer-events-none z-0 opacity-95">
-        <img src="/images/f.png" alt="" className="w-full h-full object-contain object-bottom-left" />
-      </div>
+      {/* Subtle Sand Beige Overlay for readability */}
+      <div className="absolute inset-0 bg-[#F5F1E7]/70 backdrop-blur-[2px] pointer-events-none z-0"></div>
+
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
@@ -112,7 +109,7 @@ export default function BlessingsSection() {
         {floatingParticles.map((particle) => (
           <motion.div
             key={particle.id}
-            className="absolute text-[#d39a7a]/55"
+            className="absolute text-[#D4AF37]/50"
             style={{ left: particle.left, top: particle.top }}
             animate={{
               y: [0, -80, 0],
@@ -142,28 +139,28 @@ export default function BlessingsSection() {
           <motion.div
             whileHover={{ scale: 1.08, rotate: -5 }}
             transition={{ type: 'spring', bounce: 0.6 }}
-            className="relative mx-auto mb-8 h-32 w-32 rounded-full border-8 border-white bg-white p-[2px] shadow-[0_18px_42px_rgba(189,126,84,0.3)] md:h-44 md:w-44"
+            className="relative mx-auto mb-8 h-32 w-32 rounded-full border-8 border-[#F5F1E7]/50 bg-white/90 p-[2px] shadow-[0_18px_42px_rgba(212,175,55,0.2)] md:h-44 md:w-44 backdrop-blur-md"
           >
-            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[radial-gradient(circle,rgba(255,190,198,0.3),rgba(255,255,255,0.95))]">
-              <Heart className="h-12 w-12 text-primary fill-primary/20" />
+            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.1),rgba(255,255,255,0.85))]">
+              <Heart className="h-12 w-12 text-[#9E1B1B] fill-[#9E1B1B]/20" />
             </div>
-            <Sparkles className="absolute -right-4 -top-2 h-8 w-8 animate-pulse text-[#d28a64]" />
-            <Sparkles className="absolute -bottom-4 -left-2 h-6 w-6 animate-pulse text-[#baa7df]" />
+            <Sparkles className="absolute -right-4 -top-2 h-8 w-8 animate-pulse text-[#D4AF37]" />
+            <Sparkles className="absolute -bottom-4 -left-2 h-6 w-6 animate-pulse text-[#2C503D]" />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, rotate: 2 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(255,190,198,0.18)] backdrop-blur-md"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(212,175,55,0.15)] backdrop-blur-md"
           >
-            <Heart className="h-5 w-5 text-primary fill-primary/20" />
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
+            <Heart className="h-5 w-5 text-[#9E1B1B] fill-[#9E1B1B]/20" />
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1E485B]">
               Shared With Love
             </span>
           </motion.div>
 
-          <h2 className="font-serif text-5xl font-medium tracking-tight text-foreground md:text-7xl">
+          <h2 className="font-serif text-5xl font-medium tracking-tight text-[#1E485B] md:text-7xl">
             Blessings &{' '}
-            <span className="relative inline-block text-primary">
+            <span className="relative inline-block text-[#9E1B1B]">
               Wishes
               <motion.svg
                 className="absolute -bottom-2 left-0 w-full md:-bottom-4"
@@ -176,7 +173,7 @@ export default function BlessingsSection() {
                 <motion.path
                   d="M0 10 Q 25 20, 50 10 T 100 10"
                   fill="none"
-                  stroke="var(--secondary)"
+                  stroke="#D4AF37"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -184,7 +181,7 @@ export default function BlessingsSection() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-foreground/80 font-medium">
+          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-[#1E485B]/80 font-medium">
             Share your prayers and heartfelt blessings for our new life together.
           </p>
         </motion.div>
@@ -196,44 +193,44 @@ export default function BlessingsSection() {
             transition={{ duration: 1, delay: 0.2, type: 'spring', bounce: 0.4 }}
             className="relative perspective-[1000px]"
           >
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-primary/20 bg-[linear-gradient(150deg,rgba(255,255,255,0.9)_0%,rgba(255,244,245,0.85)_100%)] p-6 shadow-[0_20px_52px_rgba(255,190,198,0.18)] backdrop-blur-xl md:p-10">
-              <div className="absolute -right-[10%] -top-[10%] h-[150px] w-[150px] rounded-full bg-[#f1c79d]/30 blur-[40px]" />
-              <div className="absolute -bottom-[10%] -left-[10%] h-[150px] w-[150px] rounded-full bg-[#c8b6ff]/28 blur-[40px]" />
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-[#D4AF37]/30 bg-[linear-gradient(150deg,rgba(245,241,231,0.9)_0%,rgba(255,255,255,0.85)_100%)] p-6 shadow-[0_20px_52px_rgba(30,72,91,0.1)] backdrop-blur-xl md:p-10">
+              <div className="absolute -right-[10%] -top-[10%] h-[150px] w-[150px] rounded-full bg-[#D4AF37]/20 blur-[40px]" />
+              <div className="absolute -bottom-[10%] -left-[10%] h-[150px] w-[150px] rounded-full bg-[#2C503D]/15 blur-[40px]" />
 
               <div className="relative z-10">
                 <div className="mb-8 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-md">
-                    <Stars className="h-5 w-5" />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1E485B] text-white shadow-md">
+                    <Stars className="h-5 w-5 text-[#D4AF37]" />
                   </span>
-                  <h3 className="font-serif text-3xl font-medium text-foreground">Leave a Message</h3>
+                  <h3 className="font-serif text-3xl font-medium text-[#1E485B]">Leave a Message</h3>
                 </div>
 
                 <motion.form onSubmit={handleAddBlessing} className="space-y-6">
                   <label className="group block">
-                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Your Name</span>
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-[#2C503D]">Your Name</span>
                     <div className="relative">
-                      <UserRound className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-primary/40 transition-colors group-focus-within:text-primary" />
+                      <UserRound className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#1E485B]/40 transition-colors group-focus-within:text-[#1E485B]" />
                       <input
                         type="text"
                         value={visitorName}
                         onChange={(e) => setVisitorName(e.target.value)}
                         placeholder="John & Jane Doe"
-                        className="h-14 w-full rounded-2xl border border-primary/10 bg-white/65 pl-12 pr-4 text-foreground placeholder-primary/30 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(255,190,198,0.12)] group-hover:bg-white/90"
+                        className="h-14 w-full rounded-2xl border border-[#D4AF37]/40 bg-white/65 pl-12 pr-4 text-[#1E485B] placeholder-[#1E485B]/30 outline-none transition-all duration-300 focus:border-[#D4AF37] focus:bg-white focus:shadow-[0_10px_20px_rgba(212,175,55,0.12)] group-hover:bg-white/90"
                         required
                       />
                     </div>
                   </label>
 
                   <label className="group block">
-                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Your Blessing</span>
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-[#2C503D]">Your Blessing</span>
                     <div className="relative">
-                      <PenLine className="pointer-events-none absolute left-4 top-4 h-5 w-5 text-primary/40 transition-colors group-focus-within:text-primary" />
+                      <PenLine className="pointer-events-none absolute left-4 top-4 h-5 w-5 text-[#1E485B]/40 transition-colors group-focus-within:text-[#1E485B]" />
                       <textarea
                         value={newBlessing}
                         onChange={(e) => setNewBlessing(e.target.value)}
                         placeholder="Share your sweetest wishes..."
                         rows={4}
-                        className="w-full resize-none rounded-[1.5rem] border border-primary/10 bg-white/65 px-4 py-4 pl-12 text-foreground placeholder-primary/30 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(255,190,198,0.12)] group-hover:bg-white/90"
+                        className="w-full resize-none rounded-[1.5rem] border border-[#D4AF37]/40 bg-white/65 px-4 py-4 pl-12 text-[#1E485B] placeholder-[#1E485B]/30 outline-none transition-all duration-300 focus:border-[#D4AF37] focus:bg-white focus:shadow-[0_10px_20px_rgba(212,175,55,0.12)] group-hover:bg-white/90"
                         required
                       />
                     </div>
@@ -246,7 +243,7 @@ export default function BlessingsSection() {
                     onHoverEnd={() => setIsHoveringSend(false)}
                     type="submit"
                     disabled={isSubmitting}
-                    className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full border border-primary bg-primary px-6 py-4 text-white shadow-[0_10px_20px_rgba(255,190,198,0.35)] transition-all hover:bg-primary/90 hover:shadow-[0_15px_30px_rgba(255,190,198,0.42)]"
+                    className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full border border-[#2C503D] bg-[#2C503D] px-6 py-4 text-white shadow-[0_10px_20px_rgba(44,80,61,0.35)] transition-all hover:bg-[#2C503D]/90 hover:shadow-[0_15px_30px_rgba(44,80,61,0.42)]"
                   >
                     <span className="relative z-10 text-sm font-bold uppercase tracking-[0.2em]">{isSubmitting ? 'Sending...' : 'Send Blessing'}</span>
                     <motion.div
@@ -257,7 +254,7 @@ export default function BlessingsSection() {
                       <Send className="h-5 w-5 text-white" />
                     </motion.div>
                     <div className="absolute inset-0 z-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(150%)]">
-                      <div className="relative h-full w-12 bg-white/30" />
+                      <div className="relative h-full w-12 bg-white/20" />
                     </div>
                   </motion.button>
 
@@ -271,10 +268,10 @@ export default function BlessingsSection() {
                         initial={{ opacity: 0, y: -10, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9, y: 10 }}
-                        className="overflow-hidden rounded-2xl border border-primary/20 bg-primary/10 px-4 py-3 text-center"
+                        className="overflow-hidden rounded-2xl border border-[#2C503D]/20 bg-[#2C503D]/10 px-4 py-3 text-center"
                       >
-                        <p className="flex items-center justify-center gap-2 text-sm font-medium text-primary">
-                          <Heart className="h-4 w-4 fill-primary" />
+                        <p className="flex items-center justify-center gap-2 text-sm font-medium text-[#2C503D]">
+                          <Heart className="h-4 w-4 fill-[#2C503D]" />
                           Message received! Thank you.
                         </p>
                       </motion.div>
@@ -305,24 +302,24 @@ export default function BlessingsSection() {
                   className="group relative overflow-hidden rounded-[2rem] border border-[#efdcc9] bg-white/70 p-6 shadow-sm backdrop-blur-md transition-all hover:bg-white hover:shadow-[0_15px_30px_rgba(191,119,82,0.2)] md:p-8"
                 >
                   <div className="absolute -right-[10px] -top-[10px] opacity-10 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
-                    <Quote className="h-24 w-24 fill-current text-primary" />
+                    <Quote className="h-24 w-24 fill-current text-[#D4AF37]" />
                   </div>
 
                   <div className="relative z-10">
-                    <p className="mb-4 text-lg font-light leading-relaxed text-[#4a3b3c]">"{blessing.message}"</p>
+                    <p className="mb-4 text-lg font-light leading-relaxed text-[#1E485B]">"{blessing.message}"</p>
 
                     <div className="mt-6 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/80 text-white shadow-sm">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#1E485B] to-[#1E485B]/80 text-white shadow-sm">
                           <span className="font-serif font-bold tracking-widest">{blessing.name.charAt(0)}</span>
                         </div>
                         <div>
-                          <h4 className="font-serif text-lg font-medium text-foreground">{blessing.name}</h4>
-                          <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-primary">{blessing.timestamp}</p>
+                          <h4 className="font-serif text-lg font-medium text-[#1E485B]">{blessing.name}</h4>
+                          <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#9E1B1B]">{blessing.timestamp}</p>
                         </div>
                       </div>
 
-                      <motion.div whileHover={{ scale: 1.2, rotate: 5 }} className="cursor-pointer text-primary/40 hover:text-primary">
+                      <motion.div whileHover={{ scale: 1.2, rotate: 5 }} className="cursor-pointer text-[#9E1B1B]/40 hover:text-[#9E1B1B]">
                         <Heart className="h-6 w-6 fill-current transition-colors" />
                       </motion.div>
                     </div>

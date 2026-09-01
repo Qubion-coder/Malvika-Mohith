@@ -16,6 +16,11 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
   const handleEnvelopeClick = () => {
     if (isAnimating || isOpen) return;
 
+    // Trigger background music exactly on this user interaction
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('start-wedding-music'));
+    }
+
     setIsAnimating(true);
     setIsOpen(true);
 
