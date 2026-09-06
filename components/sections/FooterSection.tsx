@@ -23,7 +23,7 @@ export default function FooterSection() {
           </div>
 
           <h2 className="font-serif text-4xl md:text-6xl text-white font-light tracking-tight mb-8">
-            MALVIKA <span className="text-primary italic font-normal">&amp;</span> MOHITH
+            MOHITH <span className="text-primary italic font-normal">&amp;</span> MALVIKA
           </h2>
 
           <div className="flex flex-col items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-medium text-white/40">
@@ -36,7 +36,7 @@ export default function FooterSection() {
             </div>
 
             <div className="mt-12 space-y-6 text-white/80 font-medium">
-              <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} MALVIKA & MOHITH</p>
+              <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} MOHITH & MALVIKA</p>
 
               <p className="text-[8px] tracking-[0.2em] leading-relaxed">
                 DESIGN AND CREATED BY <span className="text-white">INVITEMINT</span> | CONNECT WHATSAPP: <a href="https://wa.me/94707819074" target="_blank" className="text-white hover:underline">+94 70 781 9074</a>

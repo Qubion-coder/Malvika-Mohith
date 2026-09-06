@@ -63,37 +63,27 @@ function ParentsSectionContent() {
           </motion.div>
         )}
 
-        <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full lg:w-1/3"
-          >
-            <div className="relative aspect-[4/5] md:h-[450px] md:aspect-auto rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
-              <img src="/images/whatsapp_photo_2.jpeg" alt="Couple" className="w-full h-full object-cover object-[center_30%]" />
-            </div>
-          </motion.div>
-          <div className="flex-1 text-center lg:text-left px-4">
+        <div className="flex flex-col items-center gap-12 max-w-5xl mx-auto">
+          <div className="flex-1 text-center px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="space-y-6"
+              className="space-y-6 flex flex-col items-center"
             >
               <div className="space-y-4">
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">AARTI UTTAMANI &amp; DEEPAK UTTAMANI</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MRS. AARTI &amp; MR. DEEPAK UTTAMANI</p>
                 <p className="text-secondary font-bold uppercase tracking-[0.2em]">Together with</p>
-                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">RITU THAWANI &amp; LATE KISHOR THAWANI</p>
+                <p className="font-serif text-xl md:text-3xl text-foreground uppercase tracking-wider">MRS. RITU &amp; LATE MR. KISHOR THAWANI</p>
               </div>
 
-              <div className="py-6">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent via-secondary/30 to-transparent mx-auto lg:mx-0" />
+              <div className="py-6 w-full flex justify-center">
+                <div className="h-px w-24 bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
               </div>
 
               <div className="space-y-4">
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-black">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
-                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">MALVIKA &amp; MOHITH</h3>
+                <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">MOHITH &amp; MALVIKA</h3>
               </div>
             </motion.div>
           </div>

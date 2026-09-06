@@ -20,7 +20,7 @@ export default function CeremonyDetails() {
       timeValue: 'Dec 11, 1:30 PM',
       timeSub: 'Tropical Vibes',
       venueLabel: 'Venue',
-      venueValue: 'CITRUS WASKADUWA',
+      venueValue: 'POOL AREA, CITRUS WASKADUWA',
       venueSub: 'Sri Lanka',
     },
     {
@@ -172,17 +172,24 @@ export default function CeremonyDetails() {
                 />
               </div>
 
-              <h4 className="text-xs uppercase tracking-widest text-[#D4AF37] mb-4 font-bold flex items-center justify-center gap-4">
-                <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
-                Guest Notes
-                <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
-              </h4>
-              
-              <p className="text-[#1E485B]/90 text-base md:text-lg font-medium flex items-center justify-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#9E1B1B]"></span>
-                <span><span className="text-[#9E1B1B] font-bold uppercase tracking-widest text-[12px] mr-2">Dress Code:</span> Elegant / Formal Attire</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-[#9E1B1B]"></span>
-              </p>
+              <div className="flex flex-col items-center justify-center space-y-2">
+                <h4 className="text-sm md:text-base font-serif italic text-[#1E485B]/90">
+                  With love and best wishes from
+                </h4>
+                <p className="font-serif text-2xl md:text-3xl text-[#1E485B]">
+                  Siddharth ji <span className="text-[#D4AF37] mx-1">•</span> Payal
+                </p>
+                <div className="flex items-center justify-center gap-4 w-full py-1">
+                  <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
+                  <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold">
+                    Our little ones
+                  </span>
+                  <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
+                </div>
+                <p className="font-serif text-xl md:text-2xl text-[#9E1B1B]">
+                  Khyati &amp; Yuvraaj
+                </p>
+              </div>
             </motion.div>
 
           </motion.div>

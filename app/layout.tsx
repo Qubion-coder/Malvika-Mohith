@@ -22,8 +22,8 @@ const pinyonScript = Pinyon_Script({
 })
 
 export const metadata: Metadata = {
-  title: 'Malvika & Mohith Wedding',
-  description: 'Join us as we celebrate the wedding of Malvika and Mohith.',
+  title: 'Mohith & Malvika Wedding',
+  description: 'Join us as we celebrate the wedding of Mohith and Malvika.',
   generator: 'v0.app',
   icons: {
     icon: '/Screenshot 2026-05-08 031308.png',

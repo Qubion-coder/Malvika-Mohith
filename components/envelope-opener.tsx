@@ -184,8 +184,16 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.15 }}
-              className="mb-12 text-center"
+              className="mb-12 text-center flex flex-col items-center"
             >
+              <motion.img
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                src="/WhatsApp_Image_2026-09-07_at_02.21.53-removebg-preview.png"
+                alt="Ornament"
+                className="w-28 h-auto object-contain mb-6 drop-shadow-md"
+              />
               <div className="mb-4 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#d8b78c]/70" />
                 <p className="text-[9px] md:text-[11px] uppercase tracking-[0.5em] text-[#8c6a16]">
@@ -194,7 +202,7 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#d8b78c]/70" />
               </div>
               <h1 className="font-script text-2xl md:text-6xl tracking-[0.05em] text-[#8c6a16] capitalize">
-                Malvika <span className="text-secondary/80">&amp;</span> Mohith
+                Mohith <span className="text-secondary/80">&amp;</span> Malvika
               </h1>
             </motion.div>
 

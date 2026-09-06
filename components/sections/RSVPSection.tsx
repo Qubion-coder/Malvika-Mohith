@@ -11,6 +11,7 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
   const [formData, setFormData] = useState({
     name: guestName || '',
     attending: 'yes',
+    guests: '1',
   });
 
   useEffect(() => {
@@ -41,12 +42,13 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
         formType: 'rsvp',
         name: formData.name,
         attending: formData.attending,
+        guests: formData.guests,
       });
 
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', attending: 'yes' });
+        setFormData({ name: '', attending: 'yes', guests: '1' });
       }, 4000);
     } catch (error) {
       setSubmitError('Unable to submit right now. Please try again.');
@@ -144,8 +146,8 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-[#7b6259] leading-relaxed">
-            Please respond by 01.12.2026. <br />
-            <span className="font-bold text-[#bf7752]">Malvika | Mohith</span>
+            Please respond by 25th September, 2026. <br />
+            <span className="font-bold text-[#bf7752]">Mohith | Malvika</span>
           </p>
         </motion.div>
 
@@ -196,11 +198,11 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Attending Select */}
                     <div className="group relative">
                       <label className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c07a54]">
-                        <Users className="h-4 w-4" /> Will you be attending?
+                        <Heart className="h-4 w-4" /> Attending?
                       </label>
                       <div className="relative">
                         <select
@@ -218,6 +220,23 @@ export default function RSVPSection({ guestName }: { guestName?: string }) {
                           </svg>
                         </div>
                       </div>
+                    </div>
+
+                    {/* Guests Input */}
+                    <div className="group relative">
+                      <label className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c07a54]">
+                        <Users className="h-4 w-4" /> Number of Pax
+                      </label>
+                      <input
+                        type="number"
+                        name="guests"
+                        value={formData.guests}
+                        onChange={handleChange}
+                        min="1"
+                        max="10"
+                        required
+                        className="w-full rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 text-[#4a3b3c] outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90"
+                      />
                     </div>
                   </div>
 
