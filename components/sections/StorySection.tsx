@@ -119,9 +119,6 @@ export default function StorySection() {
             Our Love{' '}
             <span className="italic text-primary relative inline-block">
               Story
-              <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
-                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="var(--primary)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-              </svg>
             </span>
           </h2>
         </motion.div>

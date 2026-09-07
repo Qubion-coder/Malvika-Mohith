@@ -35,7 +35,7 @@ export default function FooterSection() {
               <span>2026</span>
             </div>
 
-            <div className="mt-12 space-y-6 text-white/80 font-medium">
+            <div className="mt-12 space-y-6 text-white font-medium">
               <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} MOHITH & MALVIKA</p>
 
               <p className="text-[8px] tracking-[0.2em] leading-relaxed">

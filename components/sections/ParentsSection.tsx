@@ -82,7 +82,7 @@ function ParentsSectionContent() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-black">TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-black">INVITE YOU TO CELEBRATE THE MARRIAGE OF THEIR CHILDREN</p>
                 <h3 className="font-serif text-3xl md:text-6xl text-primary font-bold uppercase tracking-widest leading-tight">MOHITH &amp; MALVIKA</h3>
               </div>
             </motion.div>
