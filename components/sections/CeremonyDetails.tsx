@@ -177,17 +177,16 @@ export default function CeremonyDetails() {
                   With love and best wishes from
                 </h4>
                 <p className="font-serif text-2xl md:text-3xl text-[#1E485B]">
-                  Siddharth ji <span className="text-[#D4AF37] mx-1">•</span> Payal
+                  Mr Siddharth <span className="text-[#D4AF37] mx-1">•</span> Mrs Payal
                 </p>
-                <div className="flex items-center justify-center gap-4 w-full py-1">
-                  <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
-                  <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold">
-                    Our little ones
-                  </span>
-                  <span className="w-12 h-[1px] bg-[#D4AF37]/40"></span> 
-                </div>
-                <p className="font-serif text-xl md:text-2xl text-[#9E1B1B]">
-                  Khyati &amp; Yuvraaj
+                <p className="font-serif text-xl md:text-2xl text-[#9E1B1B] mt-2">
+                  Khyati <span className="text-[#D4AF37] mx-1">•</span> Yuvraaj
+                </p>
+                <p className="font-serif text-xl md:text-2xl text-[#D4AF37]">
+                  &amp;
+                </p>
+                <p className="font-serif text-2xl md:text-3xl text-[#1E485B]">
+                  Mr Aryan
                 </p>
               </div>
             </motion.div>
