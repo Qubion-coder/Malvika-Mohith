@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface EnvelopeOpenerProps {
@@ -30,22 +30,27 @@ export function EnvelopeOpener({ onEnvelopeOpen, guestName }: EnvelopeOpenerProp
     }, 1000);
   };
 
-  const petals = Array.from({ length: 16 }).map((_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    delay: Math.random() * 2.5,
-    duration: 10 + Math.random() * 8,
-    scale: 0.5 + Math.random() * 0.9,
-    drift: Math.random() * 120 - 60,
-  }));
+  const [petals, setPetals] = useState<any[]>([]);
+  const [sparkles, setSparkles] = useState<any[]>([]);
 
-  const sparkles = Array.from({ length: 18 }).map((_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    delay: Math.random() * 3,
-    duration: 3 + Math.random() * 3,
-  }));
+  useEffect(() => {
+    setPetals(Array.from({ length: 16 }).map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      delay: Math.random() * 2.5,
+      duration: 10 + Math.random() * 8,
+      scale: 0.5 + Math.random() * 0.9,
+      drift: Math.random() * 120 - 60,
+    })));
+
+    setSparkles(Array.from({ length: 18 }).map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: Math.random() * 3,
+      duration: 3 + Math.random() * 3,
+    })));
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
