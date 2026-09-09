@@ -36,9 +36,9 @@ export default function FooterSection() {
             </div>
 
             <div className="mt-12 space-y-6 text-white font-medium">
-              <p className="text-[10px] tracking-[0.3em]">&copy; {new Date().getFullYear()} MOHITH & MALVIKA</p>
+              <p className="text-[10px] tracking-[0.3em] text-white">&copy; {new Date().getFullYear()} MOHITH & MALVIKA</p>
 
-              <p className="text-[8px] tracking-[0.2em] leading-relaxed">
+              <p className="text-[8px] tracking-[0.2em] leading-relaxed text-white">
                 DESIGN AND CREATED BY <span className="text-white">INVITEMINT</span> | CONNECT WHATSAPP: <a href="https://wa.me/94707819074" target="_blank" className="text-white hover:underline">+94 70 781 9074</a>
               </p>
             </div>
